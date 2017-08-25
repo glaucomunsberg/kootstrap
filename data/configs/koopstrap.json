@@ -1,0 +1,7 @@
+{
+    "path_root": "/Users/glaucorobertomunsbergdossantos/Projects/kootstrap/",
+    "path_log":"data/logs/",
+    "path_config":"data/configs/",
+    "path_dataset":"data/datasets/",
+    "version":"0.0.1"
+}

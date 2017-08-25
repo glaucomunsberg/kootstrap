@@ -1,0 +1,11 @@
+{
+    "flickr_public_key":"a6550e66205320e583d9bfb13a4b8634",
+    "flickr_private_key":"3df7fce568942ae1",
+    "flickr_per_page":500,
+    "flickr_year_min":2010,
+    "flickr_year_max":2017,
+    "flickr_size":"larger",
+    "flickr_size_minimum":224,
+    "flickr_size_maximum":1024,
+    "safe_mode":true
+}
