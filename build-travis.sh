@@ -2,4 +2,4 @@
 
 cd data/others/
 
-.test_integration.sh
+./test_integration.sh
