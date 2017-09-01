@@ -1,0 +1,7 @@
+{
+    "target_max_width":224,
+    "target_max_height":224,
+    "target_min_width":224,
+    "target_min_height":224,
+    "target_rate":0.8
+}

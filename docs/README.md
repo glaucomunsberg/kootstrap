@@ -1,0 +1,3 @@
+=== MKDocs
+
+$ mkdocs serve

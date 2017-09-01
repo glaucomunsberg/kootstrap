@@ -14,11 +14,12 @@ def main():
     parser.add_argument('--classes',type=str, default="class_1,class_2", help='name of classes that you want in dataset. Separated by comma')
     parser.add_argument('--classes_load_file',type=str, default=None, help='load names of classes if you can a long list of complex names')
     parser.add_argument('--clawler_mode',type=str, default="flickr", help='Source from information')
-    parser.add_argument('--flickr_tags',type=str, default="graffiti;street", help='Tag to crawls the flickr. Use comma (,) if you want more that one tag to classe, use (;) of Separate the tag from class destiny')
-    
+    parser.add_argument('--flickr_tags',type=str, default="graffiti;street", help='Tag to crawls the flickr. Use comma separate the tag from class destiny. Multiple tags by class use --flickr_tags_load_file ')
+    parser.add_argument('--flickr_tags_load_file',type=str, default=None, help=' load name of tags by file, tags by line or separated by coma. try something like the file')
     parser.add_argument('--num_images', type=int, default=100)
+    parser.add_argument('--annotation', type=str, default="",help='text annotation used you to describe the subset')
     args = parser.parse_args()
-
+    
     mode = None
     
     if args.mode == "crawler":

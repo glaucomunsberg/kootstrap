@@ -19,3 +19,10 @@ class Helper:
     
     def getTimeNow(self):
         return datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    
+    def filePathToList(self,path_file):
+        lines = []
+        file = open(path_file,'r')
+        for line in file:
+            lines.append(line.replace('\n', '').replace('\r', ''))
+        return lines

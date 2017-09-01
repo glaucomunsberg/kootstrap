@@ -6,6 +6,7 @@ class Koopstrap:
     
     config      = None
     flickr      = None
+    scissor     = None
     
     def __new__(cls, *args, **kwargs):
         if not cls._instance:
@@ -18,14 +19,32 @@ class Koopstrap:
             with open('../../data/configs/koopstrap.json', 'r') as f:   
                 self.config = json.load(f)
         except:
-            print "ERROR to load koopstrap.json"
+            print "ERROR to load koopstrap.json at "
             print traceback.format_exc()
             return
         
         try:
             with open(self.config['path_root']+self.config['path_config']+'flickr.json', 'r') as f:   
-                self.cralwer = json.load(f)
+                self.flickr = json.load(f)
+        except:
+            print "ERROR to load flickr.json at "+self.config['path_root']+self.config['path_config']
+            print traceback.format_exc()
+            
+        try:
+            with open(self.config['path_root']+self.config['path_config']+'scissor.json', 'r') as f:   
+                self.scissor = json.load(f)
         except:
             print "ERROR to load flickr.json"
             print traceback.format_exc()
-        
+    
+    def path_config(self):
+        return self.config['path_root']+self.config['path_config']
+    
+    def path_log(self):
+        return self.config['path_root']+self.config['path_config']
+    
+    def path_dataset(self):
+        return self.config['path_root']+self.config['path_dataset']
+    
+    def version(self):
+        return self.config['version']
