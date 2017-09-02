@@ -1,5 +1,13 @@
 # Release Notes
 
+## Version 0.0.3
+
+* `crawler`: Flickr.py train, test and now validation set
+* `crawler`: with train, test and now **validation set**
+* `maker`  : Dataset.py changet to maker package
+* `maker`  : now with train, test and now validation set 
+* `compiler -> maker` : the package `compiler` renomed to `maker`
+
 ## Version 0.0.2
 
 * `crawler` : Crawler.py improved to get images from Flickr 
@@ -13,5 +21,3 @@
 
 * `Crawler.py` create the structure used do dataset
 * Project start baseded on graphium project
-
-

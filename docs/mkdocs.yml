@@ -2,15 +2,16 @@ site_name: Kootstrap
 site_description: Kootstrap is a bootstrap to Keras. It is a technique of compile and loading a datasets into a Keras application by means of a few initial instructions that enable the introduction of the rest of the program from an input device.
 pages:
     - Home: 'index.md'
+    - Maker: 
+        - About compiler: 'maker/index.md'
+        - Dataset class: 'crawler/dataset.md'
+        - Compiler class: 'maker/compiler.md'
+        - Seeder class: 'maker/seeder.md'
+        - Scissor class: 'maker/scissor.md'
     - Crawler: 
         - About crawler: 'crawler/index.md'
-        - Dataset class: 'crawler/dataset.md'
         - Flickr class: 'crawler/flickr.md'
         - Crawler class: 'crawler/crawler.md'
-    - Compiler: 
-        - About compiler: 'compiler/index.md'
-        - Compiler class: 'compiler/compiler.md'
-        - Scissor class: 'compiler/scissor.md'
     - Trainer: 
         - About Trainer: 'trainer/index.md'
     - Tester: 

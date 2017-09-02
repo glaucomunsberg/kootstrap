@@ -31,3 +31,9 @@
 **window_width**: heigth after processed rate `type:Int`
 
 **manipulated**: if the image was cutted `type:bol`
+
+
+## Methods
+
+**cut_to_fit**: Cut the image to `destiny_path`
+**close**: force close the image

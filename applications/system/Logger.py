@@ -14,8 +14,8 @@ class Logger:
     
     def __init__(self,app_name='Koostrap',level='INFO'):
         
-        self._helper = Helper()
-        
+        self._helper    = Helper()
+        self._app_name  = app_name
         try:
             with open('../../data/configs/koopstrap.json','r') as f:
                 self._metadata = json.load(f)
@@ -28,7 +28,7 @@ class Logger:
         self.logging.Formatter(fmt='%(asctime)s %(message)s',datefmt='%Y-%m-%d %H:%M:%S')
         self.level              = level
         
-        self.logging.info(self._helper.getTimeNow()+" Start at "+platform.platform()+" with "+platform.processor())
+        self.logging.info(self._helper.getTimeNow()+" Application -> "+self._app_name+" started in  "+platform.platform()+" with processor "+platform.processor())
     
     def __new__(cls, *args, **kwargs):
         if not cls._instance:

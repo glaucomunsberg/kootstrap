@@ -105,10 +105,10 @@ class Scissor:
 
         self.image.crop(width=max_width, height=max_height, gravity='center')
         if need_cut or need_rate:
-            self._logger.info('Scissor: new image {0}-{1}x{2}_resized.{3}'.format( self.image_name, self.image.width, self.image.height, self.image.format.lower()))
+            self._logger.info('Scissor: created image {0}-{1}x{2}_resized.{3}'.format( self.image_name, self.image.width, self.image.height, self.image.format.lower()))
             self.image.save(filename='{0}{1}-{2}x{3}_resized.{4}'.format(destiny_path, self.image_name, self.image.width, self.image.height, self.image.format.lower()))
         elif max_height != None and max_width != None and max_height >= self.height and max_width >= self.width:
-            self._logger.info('Scissor: new image {0}-{1}x{2}_original.{3}'.format( self.image_name, self.image.width, self.image.height, self.image.format.lower()))
+            self._logger.info('Scissor: created image {0}-{1}x{2}_original.{3}'.format( self.image_name, self.image.width, self.image.height, self.image.format.lower()))
             self.image.save(filename='{0}{1}-{2}x{3}_original.{4}'.format(destiny_path, self.image_name, self.image.width, self.image.height, self.image.format.lower()))
         else:
             self._logger.info('Scissor: not create new image {0}-{1}x{2}.{3} on repository'.format( self.image_name, self.image.width, self.image.height, self.image.format.lower()))

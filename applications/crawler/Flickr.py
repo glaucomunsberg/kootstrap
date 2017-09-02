@@ -159,7 +159,7 @@ class Flickr(Thread):
 
                                 self._logger.info('Flickr: Creating the image '+photo['id']+' with '+str(the_best_size['width'])+'x'+str(the_best_size['height'])+'. Still missing '+str(self.num_img_to_download)+" images")
                             else:
-                                self._logger.info('Flickr: Can\'t creat the image '+photo['id']+' '+str(the_best_size['width'])+'x'+str(the_best_size['height'])+". Because is too short")
+                                self._logger.info('Flickr: Can\'t create the image '+photo['id']+' '+str(the_best_size['width'])+'x'+str(the_best_size['height'])+". Because is too short")
                         else:
                             self._logger.error('Flickr: Oh no! erro at download sizes of images =O')
                         

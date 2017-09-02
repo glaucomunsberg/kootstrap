@@ -30,26 +30,24 @@ class Dataset:
         else:
             self._logger = logger
         
-        self._helper = Helper()
+        self._helper= Helper()
+        self._args  = args
         
-        #self.dataset_name = re.sub('[^A-z0-9 -]', '', args.dataset_name)
-        #self.dataset_name = self.dataset_name.replace(" ","_")
         self.dataset_name = self.normalizeDatasetName(args.dataset_name)
         
         self.dataset_path = self._koopstrap.config['path_root']+self._koopstrap.config['path_dataset']+self.dataset_name+"/"
              
         self.classes    = []
         if args.classes_load_file != None:
-            file = open(args.classes_load_file,'r')
-            for line in file:
-                self.classes.append(line.replace('\n', '').replace('\r', ''))
+            self.classes = self._helper.filePathToList(args.classes_load_file)
         else:
             self.classes = [x.replace('\n', '').replace('\r', '') for x in args.classes.split(",")]
             
     def start(self):
         
         if not os.path.exists(self.dataset_path):
-            self._logger.info("Dataset: name '{0}' created".format(self.dataset_name))
+            self._logger.info("Dataset: named has '{0}' was created".format(self.dataset_name))
+            self._logger.info("Dataset: path'{0}'".format(self.dataset_path))
             os.makedirs(self.dataset_path)
             
             if not os.path.exists(self.dataset_path+"classes/"):
@@ -62,8 +60,10 @@ class Dataset:
             
             self.dataset_md = Metadata(self.dataset_path+"metadata.json",True)
             self.dataset_md.metadata['name'] = self.dataset_name
+            self.dataset_md.metadata['serial_identifier'] = self._helper.getSerialNow()
             self.dataset_md.metadata['created_at'] = self._helper.getTimeNow()
             self.dataset_md.metadata['classes'] = {}
+            self.dataset_md.metadata['classes_order'] = self.classes
             self.dataset_md.metadata['annotation'] = self._args.annotation
             self.dataset_md.save()
         else:
@@ -77,7 +77,8 @@ class Dataset:
                 self.dataset_md.metadata['classes'][class_name] = {}
                 self.dataset_md.metadata['classes'][class_name]['num_images'] = 0
                 self.dataset_md.metadata['classes'][class_name]['images'] = []
-            self.dataset_md.save()
+                self.dataset_md.save()
+                self._logger.info("Dataset: Create subdirectory '{0}'".format("classes/"+class_name))
         
         self._logger.info("Dataset: end correctly")
         
@@ -85,4 +86,21 @@ class Dataset:
     def normalizeDatasetName(name):
         name = re.sub('[^A-z0-9 -]', '', name)
         return name.replace(" ","_")
+    
+    
+    @staticmethod
+    def normalizePathSubset(path):
+        k = Koopstrap()
+        absolut_path = path
+        
+        if absolut_path[:1] == ".":
+            
+            if absolut_path[-1:] == "/":
+                absolut_path   = absolut_path[:-1]
+
+            absolut_path = absolut_path.split("/")
+            absolut_path = absolut_path[-3:]
+            absolut_path = k.path_dataset()+absolut_path[0]+"/"+absolut_path[1]+"/"+absolut_path[2]
+        
+        return absolut_path
         

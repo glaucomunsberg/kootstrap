@@ -22,3 +22,5 @@ The `Dataset.py` is responsible to create the folder and metadata about dataset 
 ## Methods
 
 **normalizeDatasetName**: Return the name normalized without especial caracters `type:String`
+
+**normalizePathSubset**: Normalize the path to by a absolute path

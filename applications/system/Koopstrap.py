@@ -19,7 +19,7 @@ class Koopstrap:
             with open('../../data/configs/koopstrap.json', 'r') as f:   
                 self.config = json.load(f)
         except:
-            print "ERROR to load koopstrap.json at "
+            print "ERROR to load koopstrap.json"
             print traceback.format_exc()
             return
         
@@ -27,7 +27,7 @@ class Koopstrap:
             with open(self.config['path_root']+self.config['path_config']+'flickr.json', 'r') as f:   
                 self.flickr = json.load(f)
         except:
-            print "ERROR to load flickr.json at "+self.config['path_root']+self.config['path_config']
+            print "ERROR to load flickr.json"
             print traceback.format_exc()
             
         try:
@@ -35,6 +35,13 @@ class Koopstrap:
                 self.scissor = json.load(f)
         except:
             print "ERROR to load flickr.json"
+            print traceback.format_exc()
+            
+        try:
+            with open(self.config['path_root']+self.config['path_config']+'trainer.json', 'r') as f:   
+                self.trainer = json.load(f)
+        except:
+            print "ERROR to load trainer.json"
             print traceback.format_exc()
     
     def path_config(self):
