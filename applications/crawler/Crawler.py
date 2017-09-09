@@ -4,7 +4,7 @@ import argparse,sys, traceback
 
 sys.path.append('../')
 
-from system.Koopstrap import Koopstrap
+from system.Kootstrap import Kootstrap
 from system.Metadata import Metadata
 from system.Logger import Logger
 from system.Helper import Helper
@@ -14,7 +14,7 @@ from Flickr import Flickr
 
 class Crawler:
     
-    _k      = None # koopstrap
+    _k      = None # kootstrap
     _logger = None
     _helper = None
     _args   = None
@@ -28,7 +28,7 @@ class Crawler:
     
     def __init__(self,args):
         
-        self._k         = Koopstrap()
+        self._k         = Kootstrap()
         self._logger    = Logger(app_name='Crawler')
         self._helper    = Helper()
         self._args      = args

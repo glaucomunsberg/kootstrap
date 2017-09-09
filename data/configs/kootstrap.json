@@ -12,5 +12,5 @@
     "file_order_randomly": true,
     
     "log_level":"INFO",
-    "version": "0.0.4"
+    "version": "0.0.5"
 }

@@ -8,7 +8,7 @@ from wand.image import Image
 from wand.display import display
 
 from system.Logger import Logger
-from system.Koopstrap import Koopstrap
+from system.Kootstrap import Kootstrap
 
 class Scissor:
     
@@ -28,7 +28,7 @@ class Scissor:
     
     def __init__(self,image_url="",logger=None):
         
-        self._k         = Koopstrap()
+        self._k         = Kootstrap()
         if logger == None:
             self._logger    = Logger()
         else:

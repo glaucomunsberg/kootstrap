@@ -3,7 +3,7 @@
 
 import logging, json,platform, os
 from Helper import Helper
-from Koopstrap import Koopstrap
+from Kootstrap import Kootstrap
 
 class Logger:
         
@@ -18,7 +18,7 @@ class Logger:
     def __init__(self,app_name='Koostrap',level=None):
         
         self._helper        = Helper()
-        self._k             = Koopstrap()
+        self._k             = Kootstrap()
         self._app_name      = app_name
             
         self.logging        = logging

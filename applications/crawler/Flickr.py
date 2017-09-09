@@ -11,7 +11,7 @@ sys.path.append('../')
 
 from system.Helper import Helper
 from system.Logger import Logger
-from system.Koopstrap import Koopstrap
+from system.Kootstrap import Kootstrap
 class Flickr(Thread):
     
     _k                  = None
@@ -44,7 +44,7 @@ class Flickr(Thread):
         Thread.__init__(self)
         
         self._helper        = Helper()
-        self._k             = Koopstrap()
+        self._k             = Kootstrap()
         
         if logger == None:
             self._logger    = Logger()

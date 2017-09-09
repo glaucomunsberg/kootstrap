@@ -7,7 +7,7 @@ sys.path.append('../')
 
 from shutil import copyfile
 
-from system.Koopstrap import Koopstrap
+from system.Kootstrap import Kootstrap
 from system.Metadata import Metadata
 from system.Logger import Logger
 from system.Helper import Helper
@@ -36,7 +36,7 @@ class Compiler:
     
     def __init__(self,args):
         
-        self._k         = Koopstrap()
+        self._k         = Kootstrap()
         self._logger    = Logger(app_name='Compiler')
         self._helper    = Helper()
         self._args      = args
@@ -336,7 +336,7 @@ class Seeder:
         else:
             self._logger = logger
             
-        self._k = Koopstrap()
+        self._k = Kootstrap()
         
         self.classes_images = classes_images
         

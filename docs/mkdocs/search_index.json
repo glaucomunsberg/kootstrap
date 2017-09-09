@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Welcome to Koopstrap\n\n\nKootstrap is a bootstrap to \nKeras\n. It is a technique of compile and loading a datasets into a Keras application by means of a few initial instructions that enable the introduction of the rest of the program from an input device\n\n\nCommands\n\n\n\n\npython Cralwer [dir-name]\n - Create a new dataset.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\ndata/           # folder with all data generate by applications.\n    configs/\n    models/\n    sets/\n    tests/\napplications/   # applications suches crawler, analyzers etc\ndocs/           # documentation of kootstrap\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "text": "Welcome to Koopstrap\n\n\nKootstrap is a bootstrap to \nKeras\n. It is a technique of compile and loading a datasets into a Keras application by means of a few initial instructions that enable the introduction of the rest of the program from an input device\n\n\nCommands\n\n\n\n\npython Cralwer [dir-name]\n - Create a new dataset.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\ndata/           # folder with all data generate by applications.\n    configs/\n    models/\n    sets/\n    tests/\napplications/   # applications suches crawler, analyzers etc\ndocs/           # documentation of kootstrap\nmkdocs/         # generator of documentation\n    index.md    # The documentation homepage.\n    ...         # Other markdown pages, images and other files.", 
             "title": "Home"
         }, 
         {
@@ -17,7 +17,7 @@
         }, 
         {
             "location": "/#project-layout", 
-            "text": "data/           # folder with all data generate by applications.\n    configs/\n    models/\n    sets/\n    tests/\napplications/   # applications suches crawler, analyzers etc\ndocs/           # documentation of kootstrap\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "text": "data/           # folder with all data generate by applications.\n    configs/\n    models/\n    sets/\n    tests/\napplications/   # applications suches crawler, analyzers etc\ndocs/           # documentation of kootstrap\nmkdocs/         # generator of documentation\n    index.md    # The documentation homepage.\n    ...         # Other markdown pages, images and other files.", 
             "title": "Project layout"
         }, 
         {
@@ -342,7 +342,7 @@
         }, 
         {
             "location": "/tester/", 
-            "text": "Maker\n\n\nThe tester run the model generated in \nTrainer\n and test the predictions.\n\n\nCommands\n\n\nTo use a subset of test images in a model try:\n\n\npython Main.py --model_name model_example_1 --load_data imagenet_per90_porp_default\n\n\n\nArguments\n\n\n\n\n\n\n--model_name\n: Name or path to a model in datasets folder.\n\n\n\n\n\n\n--load_data\n: Path to any subset or dataset compiled by koopstrap to test, if None we use the test set from subset of train.\n\n\n\n\n\n\n--epoch\n: Set the epoch with weigths that you want save.\n\n\n\n\n\n\n--classes\n: if empty and --classes_load_file empty the Compiler use all classes inside the dataset. Separete classes wite comma.\n\n\n\n\n\n\n--set\n: Choose if the test will use the train, validation or test set of images on subset else selected a dateset the arg will by ignorated.\n\n\n\n\n\n\n--annotation\n: annotation.", 
+            "text": "Maker\n\n\nThe tester run the model generated in \nTrainer\n and test the predictions.\n\n\nCommands\n\n\nTo use a subset of test images in a model try:\n\n\npython Main.py --model_name model_example_1 --load_data imagenet_per90_porp_default\n\n\n\nArguments\n\n\n\n\n\n\n--model_name\n: Name or path to a model in datasets folder.\n\n\n\n\n\n\n--load_data\n: Path to any subset or dataset compiled by koopstrap to test, if None we use the test set from subset of train.\n\n\n\n\n\n\n--test_name\n: Name to this test, if empty save a composition from serial number and the dataset tested\n\n\n\n\n\n\n--epoch\n: Set the epoch with weigths that you want save.\n\n\n\n\n\n\n--classes\n: if empty and --classes_load_file empty the Compiler use all classes inside the dataset. Separete classes wite comma.\n\n\n\n\n\n\n--set\n: Choose if the test will use the train, validation or test set of images on subset else selected a dateset the arg will by ignorated.\n\n\n\n\n\n\n--annotation\n: annotation.", 
             "title": "About Tester"
         }, 
         {
@@ -357,7 +357,7 @@
         }, 
         {
             "location": "/tester/#arguments", 
-            "text": "--model_name : Name or path to a model in datasets folder.    --load_data : Path to any subset or dataset compiled by koopstrap to test, if None we use the test set from subset of train.    --epoch : Set the epoch with weigths that you want save.    --classes : if empty and --classes_load_file empty the Compiler use all classes inside the dataset. Separete classes wite comma.    --set : Choose if the test will use the train, validation or test set of images on subset else selected a dateset the arg will by ignorated.    --annotation : annotation.", 
+            "text": "--model_name : Name or path to a model in datasets folder.    --load_data : Path to any subset or dataset compiled by koopstrap to test, if None we use the test set from subset of train.    --test_name : Name to this test, if empty save a composition from serial number and the dataset tested    --epoch : Set the epoch with weigths that you want save.    --classes : if empty and --classes_load_file empty the Compiler use all classes inside the dataset. Separete classes wite comma.    --set : Choose if the test will use the train, validation or test set of images on subset else selected a dateset the arg will by ignorated.    --annotation : annotation.", 
             "title": "Arguments"
         }, 
         {
@@ -382,7 +382,7 @@
         }, 
         {
             "location": "/tester/tester/", 
-            "text": "Definition\n\n\nThe \nTester.py\n execute the test and compile informations from predictions.\n\n\nParams\n\n\nargs\n: Args. \ntype:Args\n\n\nMethods\n\n\nstar\n: Execute the compilation on initializer classe", 
+            "text": "Definition\n\n\nThe \nTester.py\n execute the test and compile informations from predictions.\n\n\nParams\n\n\nargs\n: Args. \ntype:Args\n\n\nMethods\n\n\nstar\n: Execute the compilation on initializer classe\n\n\npathFromTestName\n: Return the path of test from a name of test. \ntype:String", 
             "title": "Tester class"
         }, 
         {
@@ -397,13 +397,118 @@
         }, 
         {
             "location": "/tester/tester/#methods", 
-            "text": "star : Execute the compilation on initializer classe", 
+            "text": "star : Execute the compilation on initializer classe  pathFromTestName : Return the path of test from a name of test.  type:String", 
             "title": "Methods"
         }, 
         {
             "location": "/analyzer/", 
-            "text": "", 
-            "title": "About Abalyzer"
+            "text": "Analyzer\n\n\nThe analyzer allow you see the information through any ways suchs \ndeep visualization\n and \n1-Top\n activations.\n\n\nCommands\n\n\nSee the 1-top from model and test result.\n\n\npython Main.py --mode top --test_name testing_imagenet_test_set\n\n\n\nSee a deep visualization activation\n\n\npython Main.py --mode visualization --files ../../data/datasets/graffiti/classes/graffiti/4235365635_a5fba2a2d8_o.jpg --model_name model_example_1 --class_name freight\\ car\n\n\n\nArguments\n\n\n\n\n\n\n--mode\n: if you want \ntop\n or \nvisualization\n \n\n\n\n\n\n\n--title\n: title used in images or files to export\n\n\n\n\n\n\nTop arguments\n\n\n\n\n\n\n--number_of_tops\n: Set the number of top suchs 1 or 5.\n\n\n\n\n\n\n--test_name\n: Load the values predictions to top\n\n\n\n\n\n\n--save_histogram_to_csv\n: If you want save the .csv representation.\n\n\n\n\n\n\n--save_histogram_to_png\n: If you want save the .png representation.\n\n\n\n\n\n\n--save_list_image\n: If you save de list of images by class in .csv file.\n\n\n\n\n\n\n--number_limit_to_y\n: Top in chat to y. -1 do default\n\n\n\n\n\n\nVisualization arguments\n\n\n\n\n\n\n--files\n: file or list of images path to by analyze.\n\n\n\n\n\n\n--model_name\n: name of model that want load and view activations\n\n\n\n\n\n\n--modifier\n: you can choose None, 'guided', 'relu','deconv' and 'rectified'. separeted by comma if want multiple\n\n\n\n\n\n\n--class_name\n: name of classe used\n\n\n\n\n\n\n--show_both\n: show image and image with heatmap side by side\n\n\n\n\n\n\n--epoch\n: Set the epoch with weigths that you want save", 
+            "title": "About Analyzer"
+        }, 
+        {
+            "location": "/analyzer/#analyzer", 
+            "text": "The analyzer allow you see the information through any ways suchs  deep visualization  and  1-Top  activations.", 
+            "title": "Analyzer"
+        }, 
+        {
+            "location": "/analyzer/#commands", 
+            "text": "See the 1-top from model and test result.  python Main.py --mode top --test_name testing_imagenet_test_set  See a deep visualization activation  python Main.py --mode visualization --files ../../data/datasets/graffiti/classes/graffiti/4235365635_a5fba2a2d8_o.jpg --model_name model_example_1 --class_name freight\\ car", 
+            "title": "Commands"
+        }, 
+        {
+            "location": "/analyzer/#arguments", 
+            "text": "--mode : if you want  top  or  visualization      --title : title used in images or files to export", 
+            "title": "Arguments"
+        }, 
+        {
+            "location": "/analyzer/#top-arguments", 
+            "text": "--number_of_tops : Set the number of top suchs 1 or 5.    --test_name : Load the values predictions to top    --save_histogram_to_csv : If you want save the .csv representation.    --save_histogram_to_png : If you want save the .png representation.    --save_list_image : If you save de list of images by class in .csv file.    --number_limit_to_y : Top in chat to y. -1 do default", 
+            "title": "Top arguments"
+        }, 
+        {
+            "location": "/analyzer/#visualization-arguments", 
+            "text": "--files : file or list of images path to by analyze.    --model_name : name of model that want load and view activations    --modifier : you can choose None, 'guided', 'relu','deconv' and 'rectified'. separeted by comma if want multiple    --class_name : name of classe used    --show_both : show image and image with heatmap side by side    --epoch : Set the epoch with weigths that you want save", 
+            "title": "Visualization arguments"
+        }, 
+        {
+            "location": "/analyzer/analyzer/", 
+            "text": "Definition\n\n\nAnalizer.py\n is a class that compile information from \nVisualization\n or \nTop\n executation\n\n\nParams\n\n\nargs\n: Args. \ntype:argparse\n\n\nAttributes\n\n\npath_test_folder\n : Return the test folder.\ntype:String\n \n\n\npath_test_predictions_csv\n : Return the path to csv predictions \ntype:String\n\n\npredictions_csv\n: Return the files of predictions \ntype:String\n\n\ntest_md\n: Object test_md \ntype:Metadata\n\n\nnumber_of_classes\n: Return the number of classes used \ntype:Int", 
+            "title": "Analyzer class"
+        }, 
+        {
+            "location": "/analyzer/analyzer/#definition", 
+            "text": "Analizer.py  is a class that compile information from  Visualization  or  Top  executation", 
+            "title": "Definition"
+        }, 
+        {
+            "location": "/analyzer/analyzer/#params", 
+            "text": "args : Args.  type:argparse", 
+            "title": "Params"
+        }, 
+        {
+            "location": "/analyzer/analyzer/#attributes", 
+            "text": "path_test_folder  : Return the test folder. type:String    path_test_predictions_csv  : Return the path to csv predictions  type:String  predictions_csv : Return the files of predictions  type:String  test_md : Object test_md  type:Metadata  number_of_classes : Return the number of classes used  type:Int", 
+            "title": "Attributes"
+        }, 
+        {
+            "location": "/analyzer/top_class/", 
+            "text": "Definition\n\n\nTopClass.py\n is a class that compile the Top number that you want compile\n\n\nParams\n\n\npath_csv\n: File with predictions \ntype:String\n\n\npath_destiny\n: Path to save the file .csv  \ntype:String\n\n\nnumber_of_tops\n: Number of tops \ntype:Int\n\n\nnumber_of_classes\n: number of classes in model. \ntype:Int\n\n\nlogger\n: logger. \ntype:Logger\n\n\nAttributes\n\n\npath_csv\n : Return teh csv path \ntype:String\n \n\n\npath_destiny\n : Return the path to top file \ntype:String\n\n\nnumber_of_tops\n: Return the number of top \ntype:Int\n\n\nnumber_of_classes\n: Return number of classes \ntype:Int\n\n\nname_file_top_classes\n: Name of file \ntype:String\n\n\nfile_name_top_classes\n: Path and name of file \ntype:String", 
+            "title": "TopClass class"
+        }, 
+        {
+            "location": "/analyzer/top_class/#definition", 
+            "text": "TopClass.py  is a class that compile the Top number that you want compile", 
+            "title": "Definition"
+        }, 
+        {
+            "location": "/analyzer/top_class/#params", 
+            "text": "path_csv : File with predictions  type:String  path_destiny : Path to save the file .csv   type:String  number_of_tops : Number of tops  type:Int  number_of_classes : number of classes in model.  type:Int  logger : logger.  type:Logger", 
+            "title": "Params"
+        }, 
+        {
+            "location": "/analyzer/top_class/#attributes", 
+            "text": "path_csv  : Return teh csv path  type:String    path_destiny  : Return the path to top file  type:String  number_of_tops : Return the number of top  type:Int  number_of_classes : Return number of classes  type:Int  name_file_top_classes : Name of file  type:String  file_name_top_classes : Path and name of file  type:String", 
+            "title": "Attributes"
+        }, 
+        {
+            "location": "/analyzer/top_histogram/", 
+            "text": "Definition\n\n\nTopHistogram.py\n is a class that compile the Histogram of test\n\n\nParams\n\n\nargs\n: the args used \ntype:Args\n\n\npath_csv\n: Path to csv preditions the file .csv  \ntype:String\n\n\npath_destiny\n: Path to destiny file \ntype:String\n\n\nnumber_of_classes\n: number of classes in model. \ntype:Int\n\n\nlogger\n: logger. \ntype:Logger\n\n\nAttributes\n\n\npath_predictions_csv\n : Return teh csv path \ntype:String\n\n\npath_destiny\n : Return the path to top file \ntype:String\n\n\nnumber_of_tops\n: Return the number of top \ntype:Int\n\n\nnumber_of_classes\n: Return number of classes \ntype:Int\n\n\nnumber_limit_to_y\n: Limit to y \ntype:Int\n\n\nsave_csv\n: Save in .csv file \ntype:Boolean\n\n\nsave_png\n: Save in .png file \ntype:Boolean\n\n\nsave_list_image\n: Save the list of images by class in .csv file \ntype:Boolean\n\n\nfile_name_out_csv\n: path to file .csv \ntype:String\n\n\nfile_name_out_png\n: path to file .png \ntype:String\n\n\nfile_name_out_list_csv\n: path to list of images by class .csv \ntype:String", 
+            "title": "TopHistogram class"
+        }, 
+        {
+            "location": "/analyzer/top_histogram/#definition", 
+            "text": "TopHistogram.py  is a class that compile the Histogram of test", 
+            "title": "Definition"
+        }, 
+        {
+            "location": "/analyzer/top_histogram/#params", 
+            "text": "args : the args used  type:Args  path_csv : Path to csv preditions the file .csv   type:String  path_destiny : Path to destiny file  type:String  number_of_classes : number of classes in model.  type:Int  logger : logger.  type:Logger", 
+            "title": "Params"
+        }, 
+        {
+            "location": "/analyzer/top_histogram/#attributes", 
+            "text": "path_predictions_csv  : Return teh csv path  type:String  path_destiny  : Return the path to top file  type:String  number_of_tops : Return the number of top  type:Int  number_of_classes : Return number of classes  type:Int  number_limit_to_y : Limit to y  type:Int  save_csv : Save in .csv file  type:Boolean  save_png : Save in .png file  type:Boolean  save_list_image : Save the list of images by class in .csv file  type:Boolean  file_name_out_csv : path to file .csv  type:String  file_name_out_png : path to file .png  type:String  file_name_out_list_csv : path to list of images by class .csv  type:String", 
+            "title": "Attributes"
+        }, 
+        {
+            "location": "/analyzer/visualization/", 
+            "text": "Definition\n\n\nVisualization.py\n is a class that allow you \nsee\n the activation inside the model\n\n\nParams\n\n\nargs\n: the args used \ntype:Args\n\n\nlogger\n: logger. \ntype:Logger\n\n\nAttributes\n\n\npath_images\n : Return the images path \ntype:[String]\n\n\npath_destiny\n : Return the path to top file \ntype:String\n\n\npath_model_json\n: Return the path model json file \ntype:String\n\n\npath_model_weights\n: Return the path model weights file  \ntype:String\n\n\npath_test_model_visualization_file\n: Return the folder where the file will by save \ntype:String\n\n\nserial_number\n: A serial number \ntype:String\n\n\nshow_both\n: Show image side-by-side whit headmap \ntype:Boolean\n\n\nimages_list\n: List of images file \ntype:[String]\n\n\nmodel\n: return the keras model used \ntype:Model-\nKeras\n\n\nfile_name_out_png\n: path to file .png \ntype:String\n\n\nfile_name_out_list_csv\n: path to list of images by class .csv \ntype:String", 
+            "title": "Visualization class"
+        }, 
+        {
+            "location": "/analyzer/visualization/#definition", 
+            "text": "Visualization.py  is a class that allow you  see  the activation inside the model", 
+            "title": "Definition"
+        }, 
+        {
+            "location": "/analyzer/visualization/#params", 
+            "text": "args : the args used  type:Args  logger : logger.  type:Logger", 
+            "title": "Params"
+        }, 
+        {
+            "location": "/analyzer/visualization/#attributes", 
+            "text": "path_images  : Return the images path  type:[String]  path_destiny  : Return the path to top file  type:String  path_model_json : Return the path model json file  type:String  path_model_weights : Return the path model weights file   type:String  path_test_model_visualization_file : Return the folder where the file will by save  type:String  serial_number : A serial number  type:String  show_both : Show image side-by-side whit headmap  type:Boolean  images_list : List of images file  type:[String]  model : return the keras model used  type:Model- Keras  file_name_out_png : path to file .png  type:String  file_name_out_list_csv : path to list of images by class .csv  type:String", 
+            "title": "Attributes"
         }, 
         {
             "location": "/system/koopstrap/", 
@@ -467,13 +572,18 @@
         }, 
         {
             "location": "/about/release-notes/", 
-            "text": "Release Notes\n\n\nversion 0.0.4\n\n\n\n\ntester\n: Tester.py published\n\n\nsystem\n: Logger.py separete the logs by package\n\n\n\n\nVersion 0.0.3\n\n\n\n\ncrawler\n: Flickr.py train, test and now validation set\n\n\ncrawler\n: with train, test and now \nvalidation set\n\n\nmaker\n  : Dataset.py changet to maker package\n\n\nmaker\n  : now with train, test and now validation set \n\n\ncompiler -\n maker\n : the package \ncompiler\n renomed to \nmaker\n\n\n\n\nVersion 0.0.2\n\n\n\n\ncrawler\n : Crawler.py improved to get images from Flickr \n\n\ncrawler\n : Dataset.py fixing the metadata\n\n\ncrawler\n : Flickr.py improved to flickr.json file configurations\n\n\ncompiler\n: Compiler.py create to create a subsets\n\n\ncompiler\n: Scissor create to cut images\n\n\nconfigs\n : files \nflickr.json\n, \nkoopstrap.json\n and \nscissor.json\n with new dataconfig\n\n\n\n\nVersion 0.0.1\n\n\n\n\nCrawler.py\n create the structure used do dataset\n\n\nProject start baseded on graphium project", 
+            "text": "Release Notes\n\n\nversion 0.0.5\n\n\n\n\nanalyzer\n: Allowed to generate 1-Tops likes and deep visualization\n\n\nsystem\n: Fixing name \nKootstrap.py\n\n\nconfigs\n : file name \nkootstrap.json\n fixed\n\n\n\n\nversion 0.0.4\n\n\n\n\ntester\n: Tester.py published\n\n\nsystem\n: Logger.py separete the logs by package\n\n\n\n\nVersion 0.0.3\n\n\n\n\ncrawler\n: Flickr.py train, test and now validation set\n\n\ncrawler\n: with train, test and now \nvalidation set\n\n\nmaker\n  : Dataset.py changet to maker package\n\n\nmaker\n  : now with train, test and now validation set \n\n\ncompiler -\n maker\n : the package \ncompiler\n renomed to \nmaker\n\n\n\n\nVersion 0.0.2\n\n\n\n\ncrawler\n : Crawler.py improved to get images from Flickr \n\n\ncrawler\n : Dataset.py fixing the metadata\n\n\ncrawler\n : Flickr.py improved to flickr.json file configurations\n\n\ncompiler\n: Compiler.py create to create a subsets\n\n\ncompiler\n: Scissor create to cut images\n\n\nconfigs\n : files \nflickr.json\n, \nkoopstrap.json\n and \nscissor.json\n with new dataconfig\n\n\n\n\nVersion 0.0.1\n\n\n\n\nCrawler.py\n create the structure used do dataset\n\n\nProject start baseded on graphium project", 
             "title": "Release Notes"
         }, 
         {
             "location": "/about/release-notes/#release-notes", 
             "text": "", 
             "title": "Release Notes"
+        }, 
+        {
+            "location": "/about/release-notes/#version-005", 
+            "text": "analyzer : Allowed to generate 1-Tops likes and deep visualization  system : Fixing name  Kootstrap.py  configs  : file name  kootstrap.json  fixed", 
+            "title": "version 0.0.5"
         }, 
         {
             "location": "/about/release-notes/#version-004", 

@@ -6,7 +6,7 @@ sys.path.append('../')
 
 from keras.models import model_from_json
 
-from system.Koopstrap import Koopstrap
+from system.Kootstrap import Kootstrap
 from system.Metadata import Metadata
 from system.Logger import Logger
 from system.Helper import Helper
@@ -41,7 +41,7 @@ class Mananger:
     
     def __init__(self,args,logger=None):
         
-        self._k         = Koopstrap()
+        self._k         = Kootstrap()
         self._helper    = Helper()
         
         if logger == None:
@@ -81,8 +81,6 @@ class Mananger:
             raise ValueError('We can\'t load the model from your trainning')
             
         # select the path from dataset
-        
-        
         self.set_name           = args.load_data
         path_and_type_dataset   = Dataset.isADatasetOrSubset(self.set_name)
         
@@ -119,9 +117,14 @@ class Mananger:
             
         if not os.path.isdir(self.path_load_set):
             raise ValueError('args --load_data and --set is not a valid  to by used')
-            
+        
         serial_identifier   = self._helper.getSerialNow()
-        self.path_test      = self._k.path_test()+self.model_name+"/"+serial_identifier+"_"+self.set_name+"/"
+        
+        if args.test_name == None:
+            self.path_test      = self._k.path_test()+self.model_name+"/"+serial_identifier+"_"+self.set_name+"/"
+        else:
+            self.path_test      = self._k.path_test()+self.model_name+"/"+args.test_name+"/"
+            
         os.makedirs(self.path_test)
         
         self.test_md = Metadata(self.path_test+"metadata.json",True)

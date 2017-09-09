@@ -4,7 +4,7 @@ import os, re, sys
 
 sys.path.append('../')
 
-from system.Koopstrap import Koopstrap
+from system.Kootstrap import Kootstrap
 
 class Model:
     
@@ -18,7 +18,7 @@ class Model:
         
     @staticmethod
     def pathFromModelName(name):
-        k       = Koopstrap()
+        k       = Kootstrap()
         path    = None
         path_to = None
         path_models = k.path_model()

@@ -1,6 +1,6 @@
 import json, traceback
 
-class Koopstrap:
+class Kootstrap:
     
     _instance   = None
     
@@ -16,10 +16,10 @@ class Koopstrap:
     def __init__(self):
         
         try:
-            with open('../../data/configs/koopstrap.json', 'r') as f:   
+            with open('../../data/configs/kootstrap.json', 'r') as f:   
                 self.config = json.load(f)
         except:
-            print "ERROR to load koopstrap.json"
+            print "ERROR to load kootstrap.json"
             print traceback.format_exc()
             return
         

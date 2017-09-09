@@ -1,3 +1,6 @@
 numpy
 wand
+matplotlib
+tensorflow
 keras
+keras-vis

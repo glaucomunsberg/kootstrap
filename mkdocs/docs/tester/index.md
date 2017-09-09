@@ -14,6 +14,8 @@ To use a subset of test images in a model try:
 
 * **--load_data**: Path to any subset or dataset compiled by koopstrap to test, if None we use the test set from subset of train.
 
+* **--test_name**: Name to this test, if empty save a composition from serial number and the dataset tested
+
 * **--epoch**: Set the epoch with weigths that you want save.
 
 * **--classes**: if empty and --classes_load_file empty the Compiler use all classes inside the dataset. Separete classes wite comma.

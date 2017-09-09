@@ -24,7 +24,11 @@ pages:
         - Mananger class: 'tester/mananger.md'
         - Tester class: 'tester/tester.md'
     - Analyzer: 
-        - About Abalyzer: 'analyzer/index.md'
+        - About Analyzer: 'analyzer/index.md'
+        - Analyzer class: 'analyzer/analyzer.md'
+        - TopClass class: 'analyzer/top_class.md'
+        - TopHistogram class: 'analyzer/top_histogram.md'
+        - Visualization class: 'analyzer/visualization.md'
     - System:
         - Koopstrap class: 'system/koopstrap.md'
         - Helper class: 'system/helper.md'

@@ -7,7 +7,7 @@ from keras.applications.vgg16 import preprocess_input, decode_predictions
 from keras.preprocessing import image
 from system.Helper import Helper
 from system.Logger import Logger
-from system.Koopstrap import Koopstrap
+from system.Kootstrap import Kootstrap
 from Mananger import Mananger
 
 class Tester:
@@ -25,7 +25,7 @@ class Tester:
     current_file    = None
     def __init__(self,args):
         
-        self._k         = Koopstrap()
+        self._k         = Kootstrap()
         self._helper    = Helper()
         self._logger    = Logger('Tester')
         
@@ -87,3 +87,21 @@ class Tester:
                 
         self.mananger.test_md.metadata['end_at']     = self._helper.getTimeNow()
         self.mananger.test_md.save()
+        
+    @staticmethod
+    def pathFromTestName(name):
+        k       = Kootstrap()
+        path    = None
+        path_to = None
+        path_tests = k.path_test()
+        models = [dI for dI in os.listdir(path_tests) if os.path.isdir(os.path.join(path_tests,dI))]
+        for model in models:
+            
+            path_model = path_tests+model+"/"
+            tests = [dI for dI in os.listdir(path_model) if os.path.isdir(os.path.join(path_model,dI))]
+            for test in tests:
+                if test == name:
+                    path_test   = path_model+test+"/"
+                    path        = path_test
+        
+        return path

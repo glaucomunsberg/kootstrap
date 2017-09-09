@@ -1,5 +1,11 @@
 # Release Notes
 
+## version 0.0.5
+
+* `analyzer`: Allowed to generate 1-Tops likes and deep visualization
+* `system`: Fixing name `Kootstrap.py`
+* `configs` : file name `kootstrap.json` fixed
+
 ## version 0.0.4
 
 * `tester`: Tester.py published

@@ -8,7 +8,7 @@ from keras.applications.vgg16 import VGG16
 from keras.applications.vgg19 import VGG19
 from keras.preprocessing import image
 
-from system.Koopstrap import Koopstrap
+from system.Kootstrap import Kootstrap
 from system.Metadata import Metadata
 from system.Logger import Logger
 from system.Helper import Helper
@@ -39,7 +39,7 @@ class Mananger:
     
     def __init__(self,args,logger=None):
         
-        self._k         = Koopstrap()
+        self._k         = Kootstrap()
         self._helper    = Helper()
         
         if logger == None:
@@ -132,7 +132,10 @@ class Mananger:
         self.model_md.metadata['active']            = False
         self.model_md.metadata['begin_at']          = "-"
         self.model_md.metadata['end_at']            = "-"
-        self.model_md.metadata['epoch_total']   = self._k.trainer['epochs_total']
+        if self._args.epochs > 0:
+            self.model_md.metadata['epoch_total']   = self._args.epochs
+        else:
+            self.model_md.metadata['epoch_total']   = self._k.trainer['epochs_total']
         self.model_md.metadata['epoch_current'] = 0
         self.model_md.metadata['classes_number']= len(self._subset_md.metadata['classes_order'])
         self.model_md.metadata['classes']       = self._subset_md.metadata['classes_order']
@@ -165,7 +168,7 @@ class Mananger:
         self.model_md.metadata['valitation_steps_per_epoch']= 0
         self.model_md.metadata['train_steps_per_epoch']     = 0
         self.model_md.metadata['keras_version']     = keras.__version__
-        self.model_md.metadata['koopstrap_version'] = self._k.version()
+        self.model_md.metadata['kootstrap_version'] = self._k.version()
         self.model_md.save()
         
         self._logger.info("Mananger: _epoch_total         value {0}".format(self.model_md.metadata['epoch_total']))
@@ -306,4 +309,4 @@ class Mananger:
         self.model_md.save()
         self.files_attached_md.save()
         
-        return {"g_train":generator_train, "g_validation":generator_validation, "steps_per_epoch_train":steps_per_epoch_train, "steps_per_epoch_validation":steps_per_epoch_validation, "epochs":self._k.trainer['epochs_total']}
+        return {"g_train":generator_train, "g_validation":generator_validation, "steps_per_epoch_train":steps_per_epoch_train, "steps_per_epoch_validation":steps_per_epoch_validation, "epochs":self.model_md.metadata['epoch_total']}

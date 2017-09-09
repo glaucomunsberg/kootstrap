@@ -9,9 +9,11 @@ def main():
     parser.add_argument('--model_name', type=str, default=None, help='Set the name of this model train or use --load_model')
     parser.add_argument('--load_model_file', type=str, default=None, help='Choose a particular model from a .json file')
     
-    parser.add_argument('--load_data', type=str, default=None, help='Path to any subset or dataset compiled by koopstrap. try only the name of set too.')
+    parser.add_argument('--load_data', type=str, default=None, help='Path to any subset or dataset compiled by kootstrap. try only the name of set too.')
     
     parser.add_argument('--load_weights', type=str, default=None, help='Location to pretrained model')
+    
+    parser.add_argument('--epochs', type=int, default=-1, help='If negative use the number of epochs inside of configuration')
     
     parser.add_argument('--annotation', type=str, default=None, help='text annotation used you to describe the model')
     

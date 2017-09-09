@@ -135,6 +135,30 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>http://www.glaucomunsberg.com//analyzer/analyzer/</loc>
+     <lastmod>2017-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://www.glaucomunsberg.com//analyzer/top_class/</loc>
+     <lastmod>2017-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://www.glaucomunsberg.com//analyzer/top_histogram/</loc>
+     <lastmod>2017-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://www.glaucomunsberg.com//analyzer/visualization/</loc>
+     <lastmod>2017-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     

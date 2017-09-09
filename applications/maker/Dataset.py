@@ -4,14 +4,14 @@ import re, os, argparse,sys
 
 sys.path.append('../')
 
-from system.Koopstrap import Koopstrap
+from system.Kootstrap import Kootstrap
 from system.Metadata import Metadata
 from system.Logger import Logger
 from system.Helper import Helper
 
 class Dataset:
     
-    _koopstrap      = None
+    _kootstrap      = None
     _logger         = None
     _helper         = None
     _args           = None
@@ -23,7 +23,7 @@ class Dataset:
     
     def __init__(self,args,logger=None):
         
-        self._koopstrap = Koopstrap()
+        self._kootstrap = Kootstrap()
         
         if logger == None:
             self._logger = Logger(app_name='Dataset')
@@ -35,7 +35,7 @@ class Dataset:
         
         self.dataset_name = self.normalizeDatasetName(args.dataset_name)
         
-        self.dataset_path = self._koopstrap.config['path_root']+self._koopstrap.config['path_dataset']+self.dataset_name+"/"
+        self.dataset_path = self._kootstrap.config['path_root']+self._kootstrap.config['path_dataset']+self.dataset_name+"/"
              
         self.classes    = []
         if args.classes_load_file != None:
@@ -89,7 +89,7 @@ class Dataset:
     
     @staticmethod
     def isADatasetOrSubset(name):
-        k       = Koopstrap()
+        k       = Kootstrap()
         path    = None
         path_to = None
         path_datasets = k.path_dataset()
@@ -116,7 +116,7 @@ class Dataset:
     
     @staticmethod
     def normalizePathSubset(path):
-        k = Koopstrap()
+        k = Kootstrap()
         absolut_path = path
         
         if absolut_path[:1] == ".":
@@ -141,7 +141,7 @@ class Dataset:
                     subsets = [dI for dI in os.listdir(path_datasets) if os.path.isdir(os.path.join(path_datasets,dI))]
                     for subset in subsets:
                         if name_subset == subset:
-                            print 'Find subset at '+k.path_dataset()+dataset+"/"+subset+"/"
+                            #print 'Find subset at '+k.path_dataset()+dataset+"/"+subset+"/"
                             absolut_path = k.path_dataset()+dataset+"/"+subset+"/"
                 
         return absolut_path

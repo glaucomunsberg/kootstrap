@@ -7,7 +7,7 @@ sys.path.append('../')
 import keras.callbacks as callbacks
 from system.Helper import Helper
 from system.Logger import Logger
-from system.Koopstrap import Koopstrap
+from system.Kootstrap import Kootstrap
 from system.Metadata import Metadata
 
 class KCallback(callbacks.Callback):
@@ -27,7 +27,7 @@ class KCallback(callbacks.Callback):
     
     def __init__(self, model, model_metadata, logger=None):
         
-        self._k         = Koopstrap()
+        self._k         = Kootstrap()
         self._helper    = Helper()
         
         if logger == None:
