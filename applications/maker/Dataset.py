@@ -87,6 +87,32 @@ class Dataset:
         name = re.sub('[^A-z0-9 -]', '', name)
         return name.replace(" ","_")
     
+    @staticmethod
+    def isADatasetOrSubset(name):
+        k       = Koopstrap()
+        path    = None
+        path_to = None
+        path_datasets = k.path_dataset()
+        datasets = [dI for dI in os.listdir(path_datasets) if os.path.isdir(os.path.join(path_datasets,dI))]
+        for dataset in datasets:
+            
+            path_dataset = path_datasets+dataset+"/subsets/"
+            #print 'dataset ', path_dataset
+            if dataset == name:
+                path    = path_dataset
+                path_to = 'dataset'
+                return path, path_to
+            
+            subsets = [dI for dI in os.listdir(path_dataset) if os.path.isdir(os.path.join(path_dataset,dI))]
+            for subset in subsets:
+                
+                path_subset = path_dataset+subset+"/"
+                #print 'subst ', path_subset
+                if subset == name:
+                    path    = path_subset
+                    path_to = 'subset'
+                    return path, path_to
+        return path
     
     @staticmethod
     def normalizePathSubset(path):
@@ -101,6 +127,22 @@ class Dataset:
             absolut_path = absolut_path.split("/")
             absolut_path = absolut_path[-3:]
             absolut_path = k.path_dataset()+absolut_path[0]+"/"+absolut_path[1]+"/"+absolut_path[2]
-        
+            
+        else:
+            
+            if absolut_path.split("/") <= 3:
+                
+                name_subset     = absolut_path.split("/")[-1:]
+                path_datasets   = k.path_dataset()
+                
+                datasets = [dI for dI in os.listdir(path_datasets) if os.path.isdir(os.path.join(path_datasets,dI))]
+                
+                for dataset in datasets:
+                    subsets = [dI for dI in os.listdir(path_datasets) if os.path.isdir(os.path.join(path_datasets,dI))]
+                    for subset in subsets:
+                        if name_subset == subset:
+                            print 'Find subset at '+k.path_dataset()+dataset+"/"+subset+"/"
+                            absolut_path = k.path_dataset()+dataset+"/"+subset+"/"
+                
         return absolut_path
         

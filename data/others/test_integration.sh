@@ -12,14 +12,25 @@ echo "Testing compile a subset..."
 
 python Main.py --mode compiler  --dataset_name graffiti --subset_name graffiti_per90_porp_default --per_images 90
 
+python Main.py --mode compiler  --dataset_name imagenet --subset_name imagenet_per90_porp_default --per_images 90
+
 echo "Testing crawler..."
 
-cd ../../applications/crawler/
+cd ../crawler/
 
 python Main.py --dataset_name graffiti --classes graffiti,street --num_images 10 --flickr_tags graffiti,street
 
+python Main.py --dataset_name imagenet --classes bottlecap,bison --num_images 10 --flickr_tags bottlecap,bison
 echo "Testing Training..."
 
 cd ../trainer/
 
-#python Main.py --load_subset ../../data/datasets/graffiti/subsets/graffiti_per70_porp_80/ 
+python Main.py --model_name model_example_1 --load_data imagenet_per90_porp_default
+
+echo "Testing Testing..."
+
+cd ../tester/
+
+python Main.py --model_name model_example_1 --load_data imagenet_per90_porp_default
+
+#python Main.py --model_name model_example_1 --load_data graffiti_per90_porp_default

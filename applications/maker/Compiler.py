@@ -218,14 +218,14 @@ class Compiler:
                     train_size  = (num_of_files_canditates_to_transfer*train_proportional_size)/100
                     test_size   = 100 - train_size
 
-                    files_to_transfer_train = files_canditates_to_transfer[:train_size]
+                    files_to_transfer_train         = files_canditates_to_transfer[:train_size]
                     files_to_split_validation_test  = files_canditates_to_transfer[train_size:]
                     
                     
-                    validation_proporcional_split =(self._args.validation_proportional_size*100)/(self._args.validation_proportional_size+self._args.test_proportional_size)
+                    validation_proporcional_split = (self._args.validation_proportional_size*100) / (self._args.validation_proportional_size+self._args.test_proportional_size)
                     
-                    validation_size  = (len(files_to_split_validation_test)*validation_proporcional_split)/100
-                    test_size   = 100 - validation_size
+                    validation_size = (len(files_to_split_validation_test)*validation_proporcional_split)/100
+                    test_size       = 100 - validation_size
                     #print 'Validation proporcional',validation_size
                     #print 'Test       proporcional',test_size
                     

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Glauco Roberto Munsberg">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Flickr class - Kootstrap</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Flickr class";
+    var mkdocs_page_input_path = "crawler/flickr.md";
+    var mkdocs_page_url = "/crawler/flickr/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Kootstrap</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Maker</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../maker/">About compiler</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../maker/dataset/">Dataset class</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../maker/compiler/">Compiler class</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../maker/seeder/">Seeder class</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../maker/scissor/">Scissor class</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Crawler</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../">About crawler</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Flickr class</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#definition">Definition</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#params">Params</a></li>
+        
+            <li><a class="toctree-l4" href="#attributes">Attributes</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../crawler/">Crawler class</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Trainer</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../trainer/">About Trainer</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../trainer/callback/">Callback class</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../trainer/generator/">Generator class</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../trainer/mananger/">Mananger class</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../trainer/model/">Model class</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../trainer/trainer/">Trainer class</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Tester</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../tester/">About Tester</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../tester/mananger/">Mananger class</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../tester/tester/">Tester class</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Analyzer</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../analyzer/">About Abalyzer</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">System</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../system/koopstrap/">Koopstrap class</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../system/helper/">Helper class</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../system/koopstrap/">Flickr configuration</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">About</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../about/license/">License</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../about/release-notes/">Release Notes</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Kootstrap</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Crawler &raquo;</li>
+        
+      
+    
+    <li>Flickr class</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="definition">Definition</h1>
+<p><code>Flickr.py</code> is a final class used by <code>Crawler.py</code> to download images from Flickr to a dataset created or open by <code>Dataset.py</code>.</p>
+<h2 id="params">Params</h2>
+<p><strong>args</strong>: Args. <code>type:argparse</code></p>
+<p><strong>crawler_md</strong>: the crawler metadata references. <code>type:Metadata</code></p>
+<p><strong>class_name</strong>: name of class inside of dataset to put all files crawled.</p>
+<p><strong>tags</strong>: the tags used to crawls of the param <code>class_name</code>.</p>
+<p><strong>num_img_to_download</strong>: Number of images to crawled of this <code>tags</code>.</p>
+<p><strong>year</strong>: Year of photo on flickr.</p>
+<p><strong>month</strong>: Month of photo on flickr.</p>
+<p><strong>day</strong>: Day of photo on flickr.</p>
+<p><strong>logger</strong>: logger used in application default value is None. <code>type:Logger</code></p>
+<h2 id="attributes">Attributes</h2>
+<p><strong>images_metadata</strong> : List of images and their informations.<code>type:List</code> </p>
+<pre><code>`[{'flickr_id':'91719271212', 'width':500,'height':500,'visible':true,'name':'91719271212_ah1cde.jpg'}]`
+</code></pre>
+<p><strong>total_images</strong> : Number of images download of tags by class <code>type:List</code>.</p>
+<p><strong>num_img_to_download</strong>: Number of images that need by downloaded.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../crawler/" class="btn btn-neutral float-right" title="Crawler class">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../" class="btn btn-neutral" title="About crawler"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../crawler/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

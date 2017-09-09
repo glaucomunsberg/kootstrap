@@ -1,0 +1,12 @@
+{
+    "model": "VGG16",
+    "include_top": true,
+    "weights": "imagenet",
+    "batch_size": 128,
+    "target_size": 224,
+    "epochs_total": 150,
+    "target_loss":-1.0,
+    "target_acc":-1.0,
+    "save_weights_to_each":2,
+    "shuffle":true
+}

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Glauco Roberto Munsberg">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Flickr configuration - Kootstrap</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Flickr configuration";
+    var mkdocs_page_input_path = "system/koopstrap.md";
+    var mkdocs_page_url = "/system/koopstrap/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Kootstrap</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Maker</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../maker/">About compiler</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../maker/dataset/">Dataset class</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../maker/compiler/">Compiler class</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../maker/seeder/">Seeder class</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../maker/scissor/">Scissor class</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Crawler</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../crawler/">About crawler</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../crawler/flickr/">Flickr class</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../crawler/crawler/">Crawler class</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Trainer</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../trainer/">About Trainer</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../trainer/callback/">Callback class</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../trainer/generator/">Generator class</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../trainer/mananger/">Mananger class</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../trainer/model/">Model class</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../trainer/trainer/">Trainer class</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Tester</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../tester/">About Tester</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../tester/mananger/">Mananger class</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../tester/tester/">Tester class</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Analyzer</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../analyzer/">About Abalyzer</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">System</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="./">Koopstrap class</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../helper/">Helper class</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Flickr configuration</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#definition">Definition</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#attributes">Attributes</a></li>
+        
+            <li><a class="toctree-l4" href="#methods">Methods</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">About</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../about/license/">License</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../about/release-notes/">Release Notes</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Kootstrap</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>System &raquo;</li>
+        
+      
+    
+    <li>Flickr configuration</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="definition">Definition</h1>
+<p>The koopstrap return a instance of Koopstrap. It is a Dic with many configs what you can see inside the directory <code>data/configs/</code></p>
+<h2 id="attributes">Attributes</h2>
+<p><strong>config</strong> : the metadata of configuration has default. The file <code>data/configs/kooperstrap.json</code> is load to system.<code>type:Dic</code></p>
+<p>Keys inside attribute config:</p>
+<pre><code>{
+    "path_root": "&lt;PATH&gt;/kootstrap/",
+    "path_log":"data/logs/",
+    "path_config":"data/configs/",
+    "path_dataset":"data/datasets/",
+    "path_model": "data/models/",
+    "path_test": "data/tests/",
+
+    "file_exist_count_has_download":true,
+    "transfer_file_type": "copy",
+    "file_order_randomly": true,
+
+    "log_level":"INFO",
+    "version":"0.0.1"
+}
+</code></pre>
+<p><strong>flickr</strong> : the metatada of flickr used has default. The file <code>data/configs/flickr.json</code> is load to system. <code>type:Dic</code></p>
+<p>Keys inside attribute flickr:</p>
+<pre><code>{
+    "flickr_public_key":"&lt;YOUR_KEY&gt;",
+    "flickr_private_key":"&lt;YOUR_PRIVATE_KEY&gt;",
+    "flickr_per_page":500,
+    "flickr_year_min":2010,
+    "flickr_year_max":2017,
+    "flickr_size":"larger",
+    "flickr_size_minimum":244,
+    "flickr_size_maximum":800,
+    "safe_mode":true
+}
+</code></pre>
+<p><strong>flickr</strong> : the metatada of flickr used has default. The file <code>data/configs/flickr.json</code> is load to system. <code>type:Dic</code></p>
+<p>Keys inside attribute flickr:</p>
+<pre><code>{
+    "flickr_public_key":"&lt;YOUR_KEY&gt;",
+    "flickr_private_key":"&lt;YOUR_PRIVATE_KEY&gt;",
+    "flickr_per_page":500,
+    "flickr_year_min":2010,
+    "flickr_year_max":2017,
+    "flickr_size_minimum_width":500,
+    "flickr_size_minimum_height":500,
+    "flickr_size_maximum_width":1024,
+    "flickr_size_maximum_height":1024,
+    "safe_mode":true
+}
+</code></pre>
+<p><strong>scissor</strong> : the metatada of scissor used has default. The file <code>data/configs/scissor.json</code> is load to system. <code>type:Dic</code></p>
+<p>Keys inside attribute scissor:</p>
+<pre><code>{
+    "target_max_width":224,
+    "target_max_height":224,
+    "target_min_width":224,
+    "target_min_height":224,
+    "target_rate":0.8
+}
+</code></pre>
+<p><strong>trainer</strong> : the metatada of trainer used has default. The file <code>data/configs/trainer.json</code> is load to system. <code>type:Dic</code></p>
+<p>Keys inside attribute scissor:</p>
+<pre><code>{
+    "model": "VGG16",
+    "include_top": true,
+    "weights": "imagenet",
+    "batch_size": 128,
+    "target_size": 224,
+    "epochs_total": 2,
+    "target_loss":-1.0,
+    "target_acc":-1.0,
+    "save_weights_to_each":2,
+    "shuffle":true
+}
+</code></pre>
+<h2 id="methods">Methods</h2>
+<p><strong>path_config</strong>: Return absolute path to configurations of koopstrap. <code>type:String</code></p>
+<p><strong>path_test</strong>: Return absolute path to tests folder. <code>type:String</code></p>
+<p><strong>path_log</strong>: Return absolute path to logs of system. <code>type:String</code></p>
+<p><strong>path_model</strong>: Return absolute path to models folder. <code>type:String</code></p>
+<p><strong>path_dataset</strong>: Return absolute path to all datasets. <code>type:String</code></p>
+<p><strong>version</strong>: Return version of koopstrap. <code>type:String</code></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../about/license/" class="btn btn-neutral float-right" title="License">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../helper/" class="btn btn-neutral" title="Helper class"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../helper/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../about/license/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

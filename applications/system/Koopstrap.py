@@ -47,8 +47,14 @@ class Koopstrap:
     def path_config(self):
         return self.config['path_root']+self.config['path_config']
     
+    def path_test(self):
+        return self.config['path_root']+self.config['path_test']
+    
     def path_log(self):
-        return self.config['path_root']+self.config['path_config']
+        return self.config['path_root']+self.config['path_log']
+    
+    def path_model(self):
+        return self.config['path_root']+self.config['path_model']
     
     def path_dataset(self):
         return self.config['path_root']+self.config['path_dataset']

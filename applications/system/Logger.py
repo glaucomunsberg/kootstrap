@@ -1,30 +1,36 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import logging, json,platform
+import logging, json,platform, os
 from Helper import Helper
+from Koopstrap import Koopstrap
 
 class Logger:
         
     _instance   = None
     _helper     = None
-    _metadata   = None
+    _k          = None
+    
     _app_name   = None
+    _path_logger= None
     logging     = None
     
-    def __init__(self,app_name='Koostrap',level='INFO'):
+    def __init__(self,app_name='Koostrap',level=None):
         
-        self._helper    = Helper()
-        self._app_name  = app_name
-        try:
-            with open('../../data/configs/koopstrap.json','r') as f:
-                self._metadata = json.load(f)
-        except:
-            None
+        self._helper        = Helper()
+        self._k             = Koopstrap()
+        self._app_name      = app_name
             
-        self.logging = logging
+        self.logging        = logging
+        self._path_logger   = self._k.path_log()+app_name.lower()+"/"
         
-        self.logging.basicConfig( filename=self._metadata['path_root']+self._metadata['path_log']+self._helper.getSerialNow()+"_"+app_name+".log", level=logging.DEBUG )
+        if not os.path.exists(self._path_logger):
+            os.makedirs(self._path_logger)
+            
+        if level == None:
+            level = self._k.config['log_level']
+        
+        self.logging.basicConfig(filename=self._path_logger+self._helper.getSerialNow()+".log", level=logging.DEBUG )
         self.logging.Formatter(fmt='%(asctime)s %(message)s',datefmt='%Y-%m-%d %H:%M:%S')
         self.level              = level
         

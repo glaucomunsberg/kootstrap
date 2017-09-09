@@ -3,11 +3,14 @@
     "path_log": "data/logs/",
     "path_config": "data/configs/",
     "path_dataset": "data/datasets/",
+    "path_model": "data/models/",
+    "path_test": "data/tests/",
     
     "file_exist_count_has_download":true,
     
     "transfer_file_type": "copy",
     "file_order_randomly": true,
     
-    "version": "0.0.3"
+    "log_level":"INFO",
+    "version": "0.0.4"
 }
