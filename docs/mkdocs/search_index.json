@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Welcome to Koopstrap\n\n\nKootstrap is a bootstrap to \nKeras\n. It is a technique of compile and loading a datasets into a Keras application by means of a few initial instructions that enable the introduction of the rest of the program from an input device\n\n\nCommands\n\n\n\n\npython Cralwer [dir-name]\n - Create a new dataset.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\ndata/           # folder with all data generate by applications.\n    configs/\n    models/\n    sets/\n    tests/\napplications/   # applications suches crawler, analyzers etc\ndocs/           # documentation of kootstrap\nmkdocs/         # generator of documentation\n    index.md    # The documentation homepage.\n    ...         # Other markdown pages, images and other files.", 
+            "text": "Welcome to Koopstrap\n\n\nKootstrap is a bootstrap to \nKeras\n. It is a technique of compile and loading a datasets into a Keras application by means of a few initial instructions that enable the introduction of the rest of the program from an input device\n\n\nCommands\n\n\nCreate a dataset\n with two classes.\n\n\ncd maker/\npython Main.py --mode dataset --dataset_name graffiti --classes graffiti,street\n\n\n\nCreate a subset\n of this dataset with 90% original images\n\n\npython Main.py --mode compiler  --dataset_name graffiti --subset_name graffiti_per90_porp_default --per_images 90\n\n\n\nCrawls images\n to each class from Flickr. This seed the dataset and compile the subsets.\n\n\ncd ../crawler/\npython Main.py --mode crawler,dataset --dataset dataset_example --classes graffiti,street --flickr_tags graffiti,street\\ art;street --num_images 100\n\n\n\nExecute a train\n with finetuning in Imagenet Model\n\n\ncd ../trainer/\npython Main.py --model_name model_example_1 --load_data dataset_example\n\n\n\nTest the predictions\n on model with set of test compileted in \ngraffiti_per90_porp_default\n\n\ncd ../tester/\npython Main.py --model_name model_example_1 --load_data graffiti_per90_porp_default\n\n\n\nCompile a 1-Top\n with a histogram from test results:\n\n\ncd ../analyzer/\npython Main.py --model_name top --test_name testing_imagenet_test_set\n\n\n\nProject layout\n\n\ndata/           # folder with all data generate by applications.\n    configs/\n    models/\n    datasets/\n    tests/\n    others/\napplications/   # applications suches crawler, analyzers etc\n    analyzer/\n    crawler/\n    maker/\n    system/\n    tester/\n    tools/\n    trainer/\ndocs/           # documentation of kootstrap\nmkdocs/         # generator of documentation", 
             "title": "Home"
         }, 
         {
@@ -12,12 +12,12 @@
         }, 
         {
             "location": "/#commands", 
-            "text": "python Cralwer [dir-name]  - Create a new dataset.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.", 
+            "text": "Create a dataset  with two classes.  cd maker/\npython Main.py --mode dataset --dataset_name graffiti --classes graffiti,street  Create a subset  of this dataset with 90% original images  python Main.py --mode compiler  --dataset_name graffiti --subset_name graffiti_per90_porp_default --per_images 90  Crawls images  to each class from Flickr. This seed the dataset and compile the subsets.  cd ../crawler/\npython Main.py --mode crawler,dataset --dataset dataset_example --classes graffiti,street --flickr_tags graffiti,street\\ art;street --num_images 100  Execute a train  with finetuning in Imagenet Model  cd ../trainer/\npython Main.py --model_name model_example_1 --load_data dataset_example  Test the predictions  on model with set of test compileted in  graffiti_per90_porp_default  cd ../tester/\npython Main.py --model_name model_example_1 --load_data graffiti_per90_porp_default  Compile a 1-Top  with a histogram from test results:  cd ../analyzer/\npython Main.py --model_name top --test_name testing_imagenet_test_set", 
             "title": "Commands"
         }, 
         {
             "location": "/#project-layout", 
-            "text": "data/           # folder with all data generate by applications.\n    configs/\n    models/\n    sets/\n    tests/\napplications/   # applications suches crawler, analyzers etc\ndocs/           # documentation of kootstrap\nmkdocs/         # generator of documentation\n    index.md    # The documentation homepage.\n    ...         # Other markdown pages, images and other files.", 
+            "text": "data/           # folder with all data generate by applications.\n    configs/\n    models/\n    datasets/\n    tests/\n    others/\napplications/   # applications suches crawler, analyzers etc\n    analyzer/\n    crawler/\n    maker/\n    system/\n    tester/\n    tools/\n    trainer/\ndocs/           # documentation of kootstrap\nmkdocs/         # generator of documentation", 
             "title": "Project layout"
         }, 
         {
@@ -566,19 +566,74 @@
             "title": "Methods"
         }, 
         {
+            "location": "/tools/", 
+            "text": "Tools\n\n\nThe tools help you to \nFix\n a dataset metadata or \nMigrate\n a folder of images to a valid dataset for example.\n\n\nCommands\n\n\nLost the \nmetadata.json\n from a dataset or subset? Try:\n\n\npython Main.py --mode fix --path_origin \nPATH_TO_SUBSET_OR_DATASET\n\n\n\n\nNeed migrate a folder to a dataset in Kootstrap? Try:\n\n\npython Main.py --mode migrate --path_origin \nPATH_FOLDER_WITH_CLASSES\n --path_destiny \nPATH_TO_KOOTSTRAP_FOLDER\n\n\n\n\nArguments\n\n\n\n\n\n\n--mode\n: Use \nfix\n to recovery a metadata or \nmigrate\n to create a new metadata.\n\n\n\n\n\n\n--path_origin\n: Path origin of data, in \nfix\n need be a dataset ou subset. To \nmigrate\n a folder with data to migrate.\n\n\n\n\n\n\n--path_destiny\n: Only to \nmigrate\n you need set the Kootstrap folder.\n\n\n\n\n\n\n--copy_way\n: Only to \nmigrate\n if set with \nmove\n after copy will remove the original file.\n\n\n\n\n\n\n--max_files_by_class\n: Only to \nmigrate\n set a limit to create a dataset.", 
+            "title": "About Tools"
+        }, 
+        {
+            "location": "/tools/#tools", 
+            "text": "The tools help you to  Fix  a dataset metadata or  Migrate  a folder of images to a valid dataset for example.", 
+            "title": "Tools"
+        }, 
+        {
+            "location": "/tools/#commands", 
+            "text": "Lost the  metadata.json  from a dataset or subset? Try:  python Main.py --mode fix --path_origin  PATH_TO_SUBSET_OR_DATASET   Need migrate a folder to a dataset in Kootstrap? Try:  python Main.py --mode migrate --path_origin  PATH_FOLDER_WITH_CLASSES  --path_destiny  PATH_TO_KOOTSTRAP_FOLDER", 
+            "title": "Commands"
+        }, 
+        {
+            "location": "/tools/#arguments", 
+            "text": "--mode : Use  fix  to recovery a metadata or  migrate  to create a new metadata.    --path_origin : Path origin of data, in  fix  need be a dataset ou subset. To  migrate  a folder with data to migrate.    --path_destiny : Only to  migrate  you need set the Kootstrap folder.    --copy_way : Only to  migrate  if set with  move  after copy will remove the original file.    --max_files_by_class : Only to  migrate  set a limit to create a dataset.", 
+            "title": "Arguments"
+        }, 
+        {
+            "location": "/tools/fixmetadata/", 
+            "text": "Definition\n\n\nFixMetadata.py\n recovery the file \nmetadata.json\n to \nsubset\n or \ndataset\n.\n\n\nParams\n\n\nargs\n: The args \ntype:args", 
+            "title": "FixMetadata class"
+        }, 
+        {
+            "location": "/tools/fixmetadata/#definition", 
+            "text": "FixMetadata.py  recovery the file  metadata.json  to  subset  or  dataset .", 
+            "title": "Definition"
+        }, 
+        {
+            "location": "/tools/fixmetadata/#params", 
+            "text": "args : The args  type:args", 
+            "title": "Params"
+        }, 
+        {
+            "location": "/tools/migratedataset/", 
+            "text": "Definition\n\n\nMigrateDataset.py\n create a \ndataset\n from a folder.\n\n\nParams\n\n\nargs\n: The args \ntype:args", 
+            "title": "MigrateDataset class"
+        }, 
+        {
+            "location": "/tools/migratedataset/#definition", 
+            "text": "MigrateDataset.py  create a  dataset  from a folder.", 
+            "title": "Definition"
+        }, 
+        {
+            "location": "/tools/migratedataset/#params", 
+            "text": "args : The args  type:args", 
+            "title": "Params"
+        }, 
+        {
             "location": "/about/license/", 
             "text": "MIT License\n\n\nCopyright (c) 2017 Glauco Roberto Munsberg\n\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.", 
             "title": "License"
         }, 
         {
             "location": "/about/release-notes/", 
-            "text": "Release Notes\n\n\nversion 0.0.5\n\n\n\n\nanalyzer\n: Allowed to generate 1-Tops likes and deep visualization\n\n\nsystem\n: Fixing name \nKootstrap.py\n\n\nconfigs\n : file name \nkootstrap.json\n fixed\n\n\n\n\nversion 0.0.4\n\n\n\n\ntester\n: Tester.py published\n\n\nsystem\n: Logger.py separete the logs by package\n\n\n\n\nVersion 0.0.3\n\n\n\n\ncrawler\n: Flickr.py train, test and now validation set\n\n\ncrawler\n: with train, test and now \nvalidation set\n\n\nmaker\n  : Dataset.py changet to maker package\n\n\nmaker\n  : now with train, test and now validation set \n\n\ncompiler -\n maker\n : the package \ncompiler\n renomed to \nmaker\n\n\n\n\nVersion 0.0.2\n\n\n\n\ncrawler\n : Crawler.py improved to get images from Flickr \n\n\ncrawler\n : Dataset.py fixing the metadata\n\n\ncrawler\n : Flickr.py improved to flickr.json file configurations\n\n\ncompiler\n: Compiler.py create to create a subsets\n\n\ncompiler\n: Scissor create to cut images\n\n\nconfigs\n : files \nflickr.json\n, \nkoopstrap.json\n and \nscissor.json\n with new dataconfig\n\n\n\n\nVersion 0.0.1\n\n\n\n\nCrawler.py\n create the structure used do dataset\n\n\nProject start baseded on graphium project", 
+            "text": "Release Notes\n\n\nversion 0.0.6\n\n\n\n\nmaker\n: Dataset name only in lower case\n\n\ntools\n: Create tools to migrate old datasets to kootstrap dataset and fix metadata\n\n\nsystem\n: Train,Validation and Test proporcional size in \nkootstrap.json\n\n\nsystem\n: Fixing \nKootstrap.py\n absolute path\n\n\n\n\nversion 0.0.5\n\n\n\n\nanalyzer\n: Allowed to generate 1-Tops likes and deep visualization\n\n\nsystem\n: Fixing name \nKootstrap.py\n\n\nconfigs\n : file name \nkootstrap.json\n fixed\n\n\n\n\nversion 0.0.4\n\n\n\n\ntester\n: Tester.py published\n\n\nsystem\n: Logger.py separete the logs by package\n\n\n\n\nVersion 0.0.3\n\n\n\n\ncrawler\n: Flickr.py train, test and now validation set\n\n\ncrawler\n: with train, test and now \nvalidation set\n\n\nmaker\n  : Dataset.py changet to maker package\n\n\nmaker\n  : now with train, test and now validation set \n\n\ncompiler -\n maker\n : the package \ncompiler\n renomed to \nmaker\n\n\n\n\nVersion 0.0.2\n\n\n\n\ncrawler\n : Crawler.py improved to get images from Flickr \n\n\ncrawler\n : Dataset.py fixing the metadata\n\n\ncrawler\n : Flickr.py improved to flickr.json file configurations\n\n\ncompiler\n: Compiler.py create to create a subsets\n\n\ncompiler\n: Scissor create to cut images\n\n\nconfigs\n : files \nflickr.json\n, \nkoopstrap.json\n and \nscissor.json\n with new dataconfig\n\n\n\n\nVersion 0.0.1\n\n\n\n\nCrawler.py\n create the structure used do dataset\n\n\nProject start baseded on graphium project", 
             "title": "Release Notes"
         }, 
         {
             "location": "/about/release-notes/#release-notes", 
             "text": "", 
             "title": "Release Notes"
+        }, 
+        {
+            "location": "/about/release-notes/#version-006", 
+            "text": "maker : Dataset name only in lower case  tools : Create tools to migrate old datasets to kootstrap dataset and fix metadata  system : Train,Validation and Test proporcional size in  kootstrap.json  system : Fixing  Kootstrap.py  absolute path", 
+            "title": "version 0.0.6"
         }, 
         {
             "location": "/about/release-notes/#version-005", 

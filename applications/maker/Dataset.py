@@ -11,7 +11,7 @@ from system.Helper import Helper
 
 class Dataset:
     
-    _kootstrap      = None
+    _k      = None
     _logger         = None
     _helper         = None
     _args           = None
@@ -23,7 +23,7 @@ class Dataset:
     
     def __init__(self,args,logger=None):
         
-        self._kootstrap = Kootstrap()
+        self._k = Kootstrap()
         
         if logger == None:
             self._logger = Logger(app_name='Dataset')
@@ -35,7 +35,7 @@ class Dataset:
         
         self.dataset_name = self.normalizeDatasetName(args.dataset_name)
         
-        self.dataset_path = self._kootstrap.config['path_root']+self._kootstrap.config['path_dataset']+self.dataset_name+"/"
+        self.dataset_path = self._k.config['path_root']+self._k.config['path_dataset']+self.dataset_name+"/"
              
         self.classes    = []
         if args.classes_load_file != None:
@@ -64,6 +64,7 @@ class Dataset:
             self.dataset_md.metadata['created_at'] = self._helper.getTimeNow()
             self.dataset_md.metadata['classes'] = {}
             self.dataset_md.metadata['classes_order'] = self.classes
+            self.dataset_md.metadata['kootstrap_version'] = self._k.config['version']
             self.dataset_md.metadata['annotation'] = self._args.annotation
             self.dataset_md.save()
         else:
@@ -85,7 +86,8 @@ class Dataset:
     @staticmethod
     def normalizeDatasetName(name):
         name = re.sub('[^A-z0-9 -]', '', name)
-        return name.replace(" ","_")
+        name = name.replace(" ","_")
+        return name.lower()
     
     @staticmethod
     def isADatasetOrSubset(name):

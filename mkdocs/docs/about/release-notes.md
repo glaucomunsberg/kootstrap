@@ -1,5 +1,11 @@
 # Release Notes
 
+## version 0.0.6
+* `maker`: Dataset name only in lower case
+* `tools`: Create tools to migrate old datasets to kootstrap dataset and fix metadata
+* `system`: Train,Validation and Test proporcional size in `kootstrap.json`
+* `system`: Fixing `Kootstrap.py` absolute path
+
 ## version 0.0.5
 
 * `analyzer`: Allowed to generate 1-Tops likes and deep visualization

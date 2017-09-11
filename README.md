@@ -1,6 +1,6 @@
 ![Build Status](http://glaucomunsberg.com/wp-content/uploads/2017/09/kootstrap.png)
 
-**Kootstrap** is a *bootstrap* to Keras. It is a technique of compile and loading a datasets into a Keras application by means of a few initial instructions that enable the introduction of the rest of the program from an input device.
+**Kootstrap** is a *bootstrap* to [Keras](https://keras.io/). It is a technique of compile and loading a datasets into a Keras application by means of a few initial instructions that enable the introduction of the rest of the program from an input device.
 
 [![Build Status](https://travis-ci.org/glaucomunsberg/kootstrap.svg?branch=master)](https://travis-ci.org/glaucomunsberg/kootstrap)
 
@@ -35,3 +35,15 @@
 
 	cd ../analyzer/
 	python Main.py --model_name top --test_name testing_imagenet_test_set
+	
+## Migrate datasets
+
+if you have a dataset and want migrate try:
+
+	cd ../tools/
+	python Main.py --mode migrate --path_origin <PATH_FOLDER_WITH_CLASSES> --path_destiny <PATH_TO_KOOTSTRAP_FOLDER> 
+	
+if you want create a subset or recovery the `metadata.json` try:
+
+	cd ../tools/
+	python Main.py --mode fix --path_origin <PATH_TO_SUBSET_OR_DATASET>

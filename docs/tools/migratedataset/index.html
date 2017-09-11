@@ -8,7 +8,7 @@
   
   <meta name="author" content="Glauco Roberto Munsberg">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Release Notes - Kootstrap</title>
+  <title>MigrateDataset class - Kootstrap</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Release Notes";
-    var mkdocs_page_input_path = "about/release-notes.md";
-    var mkdocs_page_url = "/about/release-notes/";
+    var mkdocs_page_name = "MigrateDataset class";
+    var mkdocs_page_input_path = "tools/migratedataset.md";
+    var mkdocs_page_url = "/tools/migratedataset/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -200,15 +200,27 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../tools/">About Tools</a>
+    <a class="" href="../">About Tools</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../tools/fixmetadata/">FixMetadata class</a>
+    <a class="" href="../fixmetadata/">FixMetadata class</a>
                 </li>
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../../tools/migratedataset/">MigrateDataset class</a>
+    <a class="current" href="./">MigrateDataset class</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#definition">Definition</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#params">Params</a></li>
+        
+        </ul>
+    
+
+    </ul>
                 </li>
     </ul>
 	    </li>
@@ -219,33 +231,11 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../license/">License</a>
+    <a class="" href="../../about/license/">License</a>
                 </li>
-                <li class=" current">
+                <li class="">
                     
-    <a class="current" href="./">Release Notes</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#release-notes">Release Notes</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#version-006">version 0.0.6</a></li>
-        
-            <li><a class="toctree-l4" href="#version-005">version 0.0.5</a></li>
-        
-            <li><a class="toctree-l4" href="#version-004">version 0.0.4</a></li>
-        
-            <li><a class="toctree-l4" href="#version-003">Version 0.0.3</a></li>
-        
-            <li><a class="toctree-l4" href="#version-002">Version 0.0.2</a></li>
-        
-            <li><a class="toctree-l4" href="#version-001">Version 0.0.1</a></li>
-        
-        </ul>
-    
-
-    </ul>
+    <a class="" href="../../about/release-notes/">Release Notes</a>
                 </li>
     </ul>
 	    </li>
@@ -272,11 +262,11 @@
     
       
         
-          <li>About &raquo;</li>
+          <li>Tools &raquo;</li>
         
       
     
-    <li>Release Notes</li>
+    <li>MigrateDataset class</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -286,47 +276,10 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="release-notes">Release Notes</h1>
-<h2 id="version-006">version 0.0.6</h2>
-<ul>
-<li><code>maker</code>: Dataset name only in lower case</li>
-<li><code>tools</code>: Create tools to migrate old datasets to kootstrap dataset and fix metadata</li>
-<li><code>system</code>: Train,Validation and Test proporcional size in <code>kootstrap.json</code></li>
-<li><code>system</code>: Fixing <code>Kootstrap.py</code> absolute path</li>
-</ul>
-<h2 id="version-005">version 0.0.5</h2>
-<ul>
-<li><code>analyzer</code>: Allowed to generate 1-Tops likes and deep visualization</li>
-<li><code>system</code>: Fixing name <code>Kootstrap.py</code></li>
-<li><code>configs</code> : file name <code>kootstrap.json</code> fixed</li>
-</ul>
-<h2 id="version-004">version 0.0.4</h2>
-<ul>
-<li><code>tester</code>: Tester.py published</li>
-<li><code>system</code>: Logger.py separete the logs by package</li>
-</ul>
-<h2 id="version-003">Version 0.0.3</h2>
-<ul>
-<li><code>crawler</code>: Flickr.py train, test and now validation set</li>
-<li><code>crawler</code>: with train, test and now <strong>validation set</strong></li>
-<li><code>maker</code>  : Dataset.py changet to maker package</li>
-<li><code>maker</code>  : now with train, test and now validation set </li>
-<li><code>compiler -&gt; maker</code> : the package <code>compiler</code> renomed to <code>maker</code></li>
-</ul>
-<h2 id="version-002">Version 0.0.2</h2>
-<ul>
-<li><code>crawler</code> : Crawler.py improved to get images from Flickr </li>
-<li><code>crawler</code> : Dataset.py fixing the metadata</li>
-<li><code>crawler</code> : Flickr.py improved to flickr.json file configurations</li>
-<li><code>compiler</code>: Compiler.py create to create a subsets</li>
-<li><code>compiler</code>: Scissor create to cut images</li>
-<li><code>configs</code> : files <code>flickr.json</code>, <code>koopstrap.json</code> and <code>scissor.json</code> with new dataconfig</li>
-</ul>
-<h2 id="version-001">Version 0.0.1</h2>
-<ul>
-<li><code>Crawler.py</code> create the structure used do dataset</li>
-<li>Project start baseded on graphium project</li>
-</ul>
+                <h1 id="definition">Definition</h1>
+<p><code>MigrateDataset.py</code> create a <code>dataset</code> from a folder.</p>
+<h2 id="params">Params</h2>
+<p><strong>args</strong>: The args <code>type:args</code></p>
               
             </div>
           </div>
@@ -334,8 +287,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../../about/license/" class="btn btn-neutral float-right" title="License">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-        <a href="../license/" class="btn btn-neutral" title="License"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+        <a href="../fixmetadata/" class="btn btn-neutral" title="FixMetadata class"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -361,8 +316,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../license/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../fixmetadata/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href="../../about/license/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

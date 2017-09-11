@@ -210,6 +210,25 @@
           
             <li class="toctree-l1">
 		
+    <span class="caption-text">Tools</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="tools/">About Tools</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="tools/fixmetadata/">FixMetadata class</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="tools/migratedataset/">MigrateDataset class</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
     <span class="caption-text">About</span>
     <ul class="subnav">
                 <li class="">
@@ -258,23 +277,46 @@
                 <h1 id="welcome-to-koopstrap">Welcome to Koopstrap</h1>
 <p>Kootstrap is a bootstrap to <a href="http://keras.io">Keras</a>. It is a technique of compile and loading a datasets into a Keras application by means of a few initial instructions that enable the introduction of the rest of the program from an input device</p>
 <h2 id="commands">Commands</h2>
-<ul>
-<li><code>python Cralwer [dir-name]</code> - Create a new dataset.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs help</code> - Print this help message.</li>
-</ul>
+<p><strong>Create a dataset</strong> with two classes.</p>
+<pre><code>cd maker/
+python Main.py --mode dataset --dataset_name graffiti --classes graffiti,street
+</code></pre>
+<p><strong>Create a subset</strong> of this dataset with 90% original images</p>
+<pre><code>python Main.py --mode compiler  --dataset_name graffiti --subset_name graffiti_per90_porp_default --per_images 90
+</code></pre>
+<p><strong>Crawls images</strong> to each class from Flickr. This seed the dataset and compile the subsets.</p>
+<pre><code>cd ../crawler/
+python Main.py --mode crawler,dataset --dataset dataset_example --classes graffiti,street --flickr_tags graffiti,street\ art;street --num_images 100
+</code></pre>
+<p><strong>Execute a train</strong> with finetuning in Imagenet Model</p>
+<pre><code>cd ../trainer/
+python Main.py --model_name model_example_1 --load_data dataset_example
+</code></pre>
+<p><strong>Test the predictions</strong> on model with set of test compileted in <code>graffiti_per90_porp_default</code></p>
+<pre><code>cd ../tester/
+python Main.py --model_name model_example_1 --load_data graffiti_per90_porp_default
+</code></pre>
+<p><strong>Compile a 1-Top</strong> with a histogram from test results:</p>
+<pre><code>cd ../analyzer/
+python Main.py --model_name top --test_name testing_imagenet_test_set
+</code></pre>
 <h2 id="project-layout">Project layout</h2>
 <pre><code>data/           # folder with all data generate by applications.
     configs/
     models/
-    sets/
+    datasets/
     tests/
+    others/
 applications/   # applications suches crawler, analyzers etc
+    analyzer/
+    crawler/
+    maker/
+    system/
+    tester/
+    tools/
+    trainer/
 docs/           # documentation of kootstrap
 mkdocs/         # generator of documentation
-    index.md    # The documentation homepage.
-    ...         # Other markdown pages, images and other files.
 </code></pre>
               
             </div>
@@ -322,5 +364,5 @@ mkdocs/         # generator of documentation
 
 <!--
 MkDocs version : 0.16.3
-Build Date UTC : 2017-09-09 23:33:25
+Build Date UTC : 2017-09-11 00:10:25
 -->

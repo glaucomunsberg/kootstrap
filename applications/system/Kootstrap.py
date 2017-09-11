@@ -1,4 +1,4 @@
-import json, traceback
+import json, traceback, os
 
 class Kootstrap:
     
@@ -15,13 +15,29 @@ class Kootstrap:
     
     def __init__(self):
         
+        path = os.path.abspath(".")
+        path = path.split("/")
+        path = path[:-2]
+        absolute_path = ""
+        for pat in path:
+            absolute_path+=pat+"/"        
+            
         try:
             with open('../../data/configs/kootstrap.json', 'r') as f:   
-                self.config = json.load(f)
+                self.config = json.load(f)    
         except:
             print "ERROR to load kootstrap.json"
             print traceback.format_exc()
             return
+        
+        if absolute_path != self.config['path_root']:
+            self.config['path_root'] = absolute_path
+            try:
+                with open('../../data/configs/kootstrap.json', 'w') as f:   
+                    json.dump(self.config, f)
+            except:
+                print "ERROR to update config absolute path"
+                print traceback.format_exc()
         
         try:
             with open(self.config['path_root']+self.config['path_config']+'flickr.json', 'r') as f:   
