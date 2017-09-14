@@ -2,7 +2,7 @@
 
 ## version 0.0.6
 * `maker`: Dataset name only in lower case
-* `tools`: Create tools to migrate old datasets to kootstrap dataset and fix metadata
+* `tools`: Create tools to migrate old datasets to kootstrap dataset, fixing metadata and transfer files
 * `system`: Train,Validation and Test proporcional size in `kootstrap.json`
 * `system`: Fixing `Kootstrap.py` absolute path
 

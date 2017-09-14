@@ -34,6 +34,18 @@ Kootstrap is a bootstrap to [Keras](http://keras.io). It is a technique of compi
 	cd ../analyzer/
 	python Main.py --model_name top --test_name testing_imagenet_test_set
 
+## Migrate datasets
+
+if you have a dataset and want migrate try:
+
+	cd ../tools/
+	python Main.py --mode migrate --path_origin <PATH_FOLDER_WITH_CLASSES> --path_destiny <PATH_TO_KOOTSTRAP_FOLDER> 
+	
+if you want create a subset or recovery the `metadata.json` try:
+
+	cd ../tools/
+	python Main.py --mode fix --path_origin <PATH_TO_SUBSET_OR_DATASET>
+
 ## Project layout
 
     data/           # folder with all data generate by applications.

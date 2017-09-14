@@ -47,3 +47,8 @@ if you want create a subset or recovery the `metadata.json` try:
 
 	cd ../tools/
 	python Main.py --mode fix --path_origin <PATH_TO_SUBSET_OR_DATASET>
+    
+Copy or move files to inside a dataset? Try:
+    
+    python Main.py --mode transfer --path_origin <PATH_FOLDER_WITH_CLASSES> --path_destiny <PATH_TO_KOOTSTRAP_FOLDER> 
+    

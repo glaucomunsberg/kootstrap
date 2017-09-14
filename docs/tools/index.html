@@ -222,6 +222,10 @@
                     
     <a class="" href="migratedataset/">MigrateDataset class</a>
                 </li>
+                <li class="">
+                    
+    <a class="" href="transfer/">Transfer class</a>
+                </li>
     </ul>
 	    </li>
           
@@ -285,22 +289,25 @@
 <p>Need migrate a folder to a dataset in Kootstrap? Try:</p>
 <pre><code>python Main.py --mode migrate --path_origin &lt;PATH_FOLDER_WITH_CLASSES&gt; --path_destiny &lt;PATH_TO_KOOTSTRAP_FOLDER&gt;
 </code></pre>
+<p>Copy or move files to inside a dataset? Try:</p>
+<pre><code>python Main.py --mode transfer --path_origin &lt;PATH_FOLDER_WITH_CLASSES&gt; --path_destiny &lt;PATH_TO_KOOTSTRAP_FOLDER&gt;
+</code></pre>
 <h4 id="arguments">Arguments</h4>
 <ul>
 <li>
-<p><strong>--mode</strong>: Use <code>fix</code> to recovery a metadata or <code>migrate</code> to create a new metadata.</p>
+<p><strong>--mode</strong>: Use <code>fix</code> to recovery a metadata, <code>migrate</code> to create a new metadata or <code>transfer</code> to move files.</p>
 </li>
 <li>
-<p><strong>--path_origin</strong>: Path origin of data, in <code>fix</code> need be a dataset ou subset. To <code>migrate</code> a folder with data to migrate.</p>
+<p><strong>--path_origin</strong>: Path origin of data, in <code>fix</code> need be a dataset ou subset. To <code>migrate</code> or <code>transfer</code> a folder with data to migrate.</p>
 </li>
 <li>
-<p><strong>--path_destiny</strong>: Only to <code>migrate</code> you need set the Kootstrap folder.</p>
+<p><strong>--path_destiny</strong>: On <code>migrate</code> you need set the Kootstrap folder and <code>transfer</code> any folder.</p>
 </li>
 <li>
-<p><strong>--copy_way</strong>: Only to <code>migrate</code> if set with <code>move</code> after copy will remove the original file.</p>
+<p><strong>--copy_way</strong>: To <code>migrate</code> or <code>transfer</code> if set with <code>move</code> after copy will remove the original file.</p>
 </li>
 <li>
-<p><strong>--max_files_by_class</strong>: Only to <code>migrate</code> set a limit to create a dataset.</p>
+<p><strong>--max_files_by_class</strong>: To <code>migrate</code> or <code>transfer</code> set a limit to create a dataset.</p>
 </li>
 </ul>
               

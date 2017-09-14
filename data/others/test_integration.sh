@@ -43,6 +43,6 @@ echo "Testing Analyzer: 1-Top..."
 
 python Main.py --mode top --test_name testing_imagenet_test_set
 
-echo "Testing Analyzer: Deep visualization..."
+#echo "Testing Analyzer: Deep visualization..."
 
-python Main.py --mode visualization --files ../../data/datasets/graffiti/classes/graffiti/4235365635_a5fba2a2d8_o.jpg --model_name model_example_1 --class_name freight\ car
+#python Main.py --mode visualization --files ../../data/datasets/graffiti/classes/graffiti/4235365635_a5fba2a2d8_o.jpg --model_name model_example_1 --class_name freight\ car

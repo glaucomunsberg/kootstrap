@@ -58,6 +58,8 @@
         
             <li><a class="toctree-l3" href="#commands">Commands</a></li>
         
+            <li><a class="toctree-l3" href="#migrate-datasets">Migrate datasets</a></li>
+        
             <li><a class="toctree-l3" href="#project-layout">Project layout</a></li>
         
         </ul>
@@ -224,6 +226,10 @@
                     
     <a class="" href="tools/migratedataset/">MigrateDataset class</a>
                 </li>
+                <li class="">
+                    
+    <a class="" href="tools/transfer/">Transfer class</a>
+                </li>
     </ul>
 	    </li>
           
@@ -300,6 +306,15 @@ python Main.py --model_name model_example_1 --load_data graffiti_per90_porp_defa
 <pre><code>cd ../analyzer/
 python Main.py --model_name top --test_name testing_imagenet_test_set
 </code></pre>
+<h2 id="migrate-datasets">Migrate datasets</h2>
+<p>if you have a dataset and want migrate try:</p>
+<pre><code>cd ../tools/
+python Main.py --mode migrate --path_origin &lt;PATH_FOLDER_WITH_CLASSES&gt; --path_destiny &lt;PATH_TO_KOOTSTRAP_FOLDER&gt;
+</code></pre>
+<p>if you want create a subset or recovery the <code>metadata.json</code> try:</p>
+<pre><code>cd ../tools/
+python Main.py --mode fix --path_origin &lt;PATH_TO_SUBSET_OR_DATASET&gt;
+</code></pre>
 <h2 id="project-layout">Project layout</h2>
 <pre><code>data/           # folder with all data generate by applications.
     configs/
@@ -364,5 +379,5 @@ mkdocs/         # generator of documentation
 
 <!--
 MkDocs version : 0.16.3
-Build Date UTC : 2017-09-11 00:10:25
+Build Date UTC : 2017-09-14 14:17:15
 -->
