@@ -1,6 +1,6 @@
 ![Build Status](http://glaucomunsberg.com/wp-content/uploads/2017/09/kootstrap.png)
 
-**Kootstrap** is a *bootstrap* to [Keras](https://keras.io/). It is a technique of compile and loading a datasets into a Keras application by means of a few initial instructions that enable the introduction of the rest of the program from an input device.
+**Kootstrap** is a *bootstrap* to [Keras](https://keras.io/). It is a technique of compile and loading a datasets into a Keras application by means of a few initial instructions that enable the introduction of the rest of the program from an input dataset.
 
 [![Build Status](https://travis-ci.org/glaucomunsberg/kootstrap.svg?branch=master)](https://travis-ci.org/glaucomunsberg/kootstrap) [![version](https://img.shields.io/github/release/glaucomunsberg/kootstrap/all.svg)](https://github.com/glaucomunsberg/kootstrap/)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/glaucomunsberg/kootstrap/blob/master/LICENSE)

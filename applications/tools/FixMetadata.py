@@ -84,7 +84,7 @@ class FixMetadata:
                 files_to_transfer = glob.glob(path_folder_origin_classes+class_name+"/*.*")
                 
                 files_names = []
-                print "FILES to TRASNFER",files_to_transfer
+                #print "FILES to TRASNFER",files_to_transfer
                 for file in files_to_transfer:
                     files_names.append(file.split("/")[-1:][0])
                     
@@ -166,7 +166,7 @@ class FixMetadata:
             # train set
             path_folder_origin_classes = self.path_folder_origin+"train/"
             classes = [dI for dI in os.listdir(path_folder_origin_classes) if os.path.isdir(os.path.join(path_folder_origin_classes,dI))]
-            print 'CLASSES',classes
+            print 'Class ',classes
             for class_name in classes:
                 self.set_md.metadata['train_images'][class_name] = []
                 self.set_md.save()
@@ -174,7 +174,7 @@ class FixMetadata:
                 files_to_transfer = glob.glob(path_folder_origin_classes+class_name+"/*.*")
                 
                 files_names = []
-                print "FILES to TRASNFER",files_to_transfer
+                #print "FILES to TRASNFER",files_to_transfer
                 for file in files_to_transfer:
                     files_names.append(file.split("/")[-1:][0])
                     
@@ -188,7 +188,7 @@ class FixMetadata:
             # validation set
             path_folder_origin_classes = self.path_folder_origin+"validation/"
             classes = [dI for dI in os.listdir(path_folder_origin_classes) if os.path.isdir(os.path.join(path_folder_origin_classes,dI))]
-            print 'CLASSES',classes
+            print 'Class ',classes
             for class_name in classes:
                 self.set_md.metadata['validation_images'][class_name] = []
                 self.set_md.save()
@@ -196,7 +196,7 @@ class FixMetadata:
                 files_to_transfer = glob.glob(path_folder_origin_classes+class_name+"/*.*")
                 
                 files_names = []
-                print "FILES to TRASNFER",files_to_transfer
+                #print "FILES to TRASNFER",files_to_transfer
                 for file in files_to_transfer:
                     files_names.append(file.split("/")[-1:][0])
                     
@@ -210,7 +210,7 @@ class FixMetadata:
             # validation set
             path_folder_origin_classes = self.path_folder_origin+"test/"
             classes = [dI for dI in os.listdir(path_folder_origin_classes) if os.path.isdir(os.path.join(path_folder_origin_classes,dI))]
-            print 'CLASSES',classes
+            print 'Class ',classes
             for class_name in classes:
                 self.set_md.metadata['test_images'][class_name] = []
                 self.set_md.save()
@@ -218,7 +218,7 @@ class FixMetadata:
                 files_to_transfer = glob.glob(path_folder_origin_classes+class_name+"/*.*")
                 
                 files_names = []
-                print "FILES to TRASNFER",files_to_transfer
+                #print "FILES to TRASNFER",files_to_transfer
                 for file in files_to_transfer:
                     files_names.append(file.split("/")[-1:][0])
                     

@@ -165,7 +165,7 @@ class Compiler:
                 random.shuffle(files_canditates_to_transfer)
                 
             # calculate the percent or total of images
-            if self._args.num_images == -1 or self._args.per_images == 100:
+            if self._args.num_images == -1 and self._args.per_images == 100:
                 num_images = num_of_files_canditates_to_transfer
             elif self._args.per_images != -1:
                     per_images = self._args.per_images
