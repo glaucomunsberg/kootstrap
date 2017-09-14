@@ -72,7 +72,7 @@ class Transfer:
                 if moved < self.number_of_images:
                     
                     self._logger.info("Transfer: file {0} - {1} moved".format(moved,file_name))
-                    print 'file ',moved, 'name', file_name
+                    #print 'file ',moved, 'name', file_name
                     
                     if self.copy_way:
                         shutil.copyfile(self.images_folder+file_name, self.images_destity+file_name)
