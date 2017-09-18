@@ -3,7 +3,7 @@ site_description: Kootstrap is a bootstrap to Keras. It is a technique of compil
 pages:
     - Home: 'index.md'
     - Maker: 
-        - About compiler: 'maker/index.md'
+        - About Maker: 'maker/index.md'
         - Dataset class: 'maker/dataset.md'
         - Compiler class: 'maker/compiler.md'
         - Seeder class: 'maker/seeder.md'

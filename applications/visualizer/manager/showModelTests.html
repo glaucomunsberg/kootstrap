@@ -1,0 +1,94 @@
+<html>
+<header>
+    <meta charset="UTF-8">
+    <title>Kootstrap - WebVisualizer</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</header>
+<body>
+    <nav class="nav-extended" style="background-color: #4CAF50;">
+        <div class="nav-wrapper">
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><i class="material-icons" style='cursor:pointer' onclick="location.reload()">refresh</i></li>
+            </ul>
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+            <div class="col s12">
+                <a href="#!" class="breadcrumb" onclick="$('.button-collapse').sideNav('show');"><i class="material-icons" style='cursor:pointer;margin-right:10px'>menu</i> Home</a>
+                <a href="#!" class="breadcrumb">Test Model</a>
+                <a href="#!" class="breadcrumb">k_model_test</a>
+                <a href="#!" class="breadcrumb">Informations</a>
+            </div>
+            
+        </div>
+    </nav>
+    <ul id="slide-out" class="side-nav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="http://glaucomunsberg.com/wp-content/uploads/2016/02/web-background.png">
+                </div>
+                <a href="#!user" style="visibility:hidden;"><img class="circle" src=""></a>
+                <a href="#!name"><span class="white-text name"></span></a>
+                <a href="#!email"><span class="white-text email"></span></a>
+            </div>
+        </li>
+        <li><a href="/"><i class="material-icons">home</i>Home</a></li>
+        <li><a href="/?tab=datasets"><i class="material-icons">data_usage</i>Datasets</a></li>
+        <li><a href="/?tab=models"><i class="material-icons">line_weight</i>Models</a></li>
+        <li><a href="/?tab=modelsTest"><i class="material-icons">compare_arrows</i>Model tests</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="waves-effect" href="https://github.com/glaucomunsberg/kootstrap"><i class="material-icons">code</i>Git Repository</a></li>
+        <li><a href="/?tab=about">About</a></li>
+    </ul>
+    <div class="container">
+        <div id="datasets" class="col s12">
+            <ul class="collection">
+                k_list_of_tests_by_model
+            </ul>
+        </div>
+    </div>
+    <div style="position: fixed; right: 15%; bottom: 10px;">
+        <a target="_blank" href='https://github.com/glaucomunsberg/kootstrap'>© Kootstrap</a>, 2017
+    </div>
+    <script>
+        $('.button-collapse').sideNav();
+    </script>
+    <style>
+        .nav-wrapper {
+            padding: 0px 15px;
+        }
+        
+        .loading_spinner {
+            -webkit-animation: spin 4s linear infinite;
+            -moz-animation: spin 4s linear infinite;
+            animation: spin 4s linear infinite;
+        }
+        
+        @-moz-keyframes spin {
+            100% {
+                -moz-transform: rotate(360deg);
+            }
+        }
+        
+        @-webkit-keyframes spin {
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes spin {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</body>
+
+</html>

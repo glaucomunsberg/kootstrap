@@ -1,0 +1,139 @@
+<html>
+<header>
+    <meta charset="UTF-8">
+    <title>Kootstrap - WebVisualizer</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</header>
+
+<body>
+    <nav class="nav-extended" style="background-color: #4CAF50;">
+        <div class="nav-wrapper">
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><i class="material-icons" style='cursor:pointer' onclick="location.reload()">refresh</i></li>
+            </ul>
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+            <div class="col s12">
+                <a href="#!" class="breadcrumb" onclick="$('.button-collapse').sideNav('show');"><i class="material-icons" style='cursor:pointer;margin-right:10px'>menu</i> Home</a>
+            </div>
+        </div>
+        <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+                <li class="tab"><a class="active" href="#datasets">Datasets</a></li>
+                <li class="tab"><a href="#models">Models</a></li>
+                <li class="tab"><a href="#tests">Tests</a></li>
+                <li class="tab"><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <ul id="slide-out" class="side-nav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="http://glaucomunsberg.com/wp-content/uploads/2016/02/web-background.png">
+                </div>
+                <a href="#!user" style="visibility:hidden;"><img class="circle" src=""></a>
+                <a href="#!name"><span class="white-text name"></span></a>
+                <a href="#!email"><span class="white-text email"></span></a>
+            </div>
+        </li>
+        <li><a href="/"><i class="material-icons">home</i>Home</a></li>
+        <li><a href="/?tab=datasets"><i class="material-icons">data_usage</i>Datasets</a></li>
+        <li><a href="/?tab=models"><i class="material-icons">line_weight</i><span class="new badge"></span>Models</a></li>
+        <li><a href="/?tab=models"><i class="material-icons">compare_arrows</i>Model tests</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="waves-effect" href="https://github.com/glaucomunsberg/kootstrap"><i class="material-icons">code</i>Git Repository</a></li>
+        <li><a href="/?tab=about">About</a></li>
+    </ul>
+    <div class="container">
+        <div id="datasets" class="col s12">
+            <h2 class="header">Datasets</h2>
+            <ul class="collection">
+                k_list_of_datasets
+            </ul>
+        </div>
+        <div id="models" class="col s12">
+           <h2 class="header">Models</h2>
+            <div class="collection">
+                k_list_of_models
+            </div>
+        </div>
+        <div id="tests" class="col s12">
+            <h2 class="header">Tests</h2>
+            <div class="collection">
+                k_list_of_tests
+            </div>
+        </div>
+        <div id="about" class="col s12">
+            <img style="" src="http://glaucomunsberg.com/wp-content/uploads/2017/09/kootstrap.png">
+            <div class="collection">
+                <a href="#!" class="collection-item">Version <b>k_version</b></a>
+                <a href="#!" class="collection-item">Log Level  <b>k_log_level</b></a>
+                <a href="#!" class="collection-item">Train proportional size <b>k_train_size</b></a>
+                <a href="#!" class="collection-item">Validation proportional size <b>k_validation_size</b></a>
+                <a href="#!" class="collection-item">Test proportional size <b>k_test_size</b></a>
+            </div>
+        </div>
+    </div>
+    <div style="position: fixed; right: 15%; bottom: 10px;">
+        <a target="_blank" href='https://github.com/glaucomunsberg/kootstrap'>© Kootstrap</a>, 2017
+    </div>
+    <script>
+        $('.button-collapse').sideNav();
+        
+        $(document).ready(function(){
+            var url = new URL(window.location.href );
+            var tab = url.searchParams.get("tab");
+            if(tab == "about"){
+                $('ul.tabs').tabs('select_tab', 'about');
+            }
+            if(tab == "models"){
+                $('ul.tabs').tabs('select_tab', 'model');
+            }
+            if(tab == "datasets"){
+                $('ul.tabs').tabs('select_tab', 'dataset');
+            }
+            if(tab == "modelsTest"){
+                $('ul.tabs').tabs('select_tab', 'test');
+            }
+        })
+    </script>
+    <style>
+        .nav-wrapper {
+            padding: 0px 15px;
+        }
+        
+        .loading_spinner {
+            -webkit-animation: spin 4s linear infinite;
+            -moz-animation: spin 4s linear infinite;
+            animation: spin 4s linear infinite;
+        }
+        
+        @-moz-keyframes spin {
+            100% {
+                -moz-transform: rotate(360deg);
+            }
+        }
+        
+        @-webkit-keyframes spin {
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes spin {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</body>
+
+</html>

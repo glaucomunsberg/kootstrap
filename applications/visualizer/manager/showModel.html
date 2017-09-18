@@ -1,0 +1,288 @@
+<html>
+<header>
+    <meta charset="UTF-8">
+    <title>Kootstrap - WebVisualizer</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</header>
+<body>
+    <nav class="nav-extended" style="background-color: #4CAF50;">
+        <div class="nav-wrapper">
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><i class="material-icons" style='cursor:pointer' onclick="location.reload()">refresh</i></li>
+            </ul>
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+            <div class="col s12">
+                <a href="#!" class="breadcrumb" onclick="$('.button-collapse').sideNav('show');"><i class="material-icons" style='cursor:pointer;margin-right:10px'>menu</i> Home</a>
+                <a href="#!" class="breadcrumb">Models</a>
+                <a href="#!" class="breadcrumb">model_name</a>
+                <a href="#!" class="breadcrumb">Informations</a>
+            </div>
+        </div>
+        <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+                <li class="tab"><a class="active" href="#charts">Charts</a></li>
+                <li class="tab"><a href="#info">Config</a></li>
+                <li class="tab"><a class="active" href="#model">Model</a></li>
+                <li class="tab"><a href="#classes">Classes</a></li>
+            </ul>
+        </div>
+    </nav>
+    <ul id="slide-out" class="side-nav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="http://glaucomunsberg.com/wp-content/uploads/2016/02/web-background.png">
+                </div>
+                <a href="#!user" style="visibility:hidden;"><img class="circle" src=""></a>
+                <a href="#!name"><span class="white-text name"></span></a>
+                <a href="#!email"><span class="white-text email"></span></a>
+            </div>
+        </li>
+        <li><a href="/"><i class="material-icons">home</i>Home</a></li>
+        <li><a href="/?tab=datasets"><i class="material-icons">data_usage</i>Datasets</a></li>
+        <li><a href="/?tab=models"><i class="material-icons">line_weight</i>Models</a></li>
+        <li><a href="/?tab=modelsTest"><i class="material-icons">compare_arrows</i>Model tests</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="waves-effect" href="https://github.com/glaucomunsberg/kootstrap"><i class="material-icons">code</i>Git Repository</a></li>
+        <li><a href="/?tab=about">About</a></li>
+    </ul>
+    <div class="container">
+        <div id="charts" class="col s12">
+            <div loader class="row valign-wrapper z-depth-1" style='background-color: #4CAF50; color:white; border-radius: 2px; margin: 20px 0px 10px 0px; padding: 0px 5px; cursor:pointer; height: 40px;'>
+                <div class='col'>
+                    <img src='http://samherbert.net/svg-loaders/svg-loaders/bars.svg' style="height: 25px; width: auto;">
+                </div>
+                <div class="col s12">
+                    Training is running...
+                </div>
+                <div clear class='col' onclick="$(document.querySelector('div[clear]').parentElement).hide()">
+                    <i class="material-icons">clear</i>
+                </div>
+            </div>
+            <div class='row' style="margin-top:10px">
+                <div class='col s12'>
+                    <canvas id="chart_loss" width="1200px" height="200px"></canvas>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col s12' id=''>
+                    <canvas id="chart_acc" width="1200px" height="200px"></canvas>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col s12' id=''>
+                    <canvas id="chart_time" width="1200px" height="200px"></canvas>
+                </div>
+            </div>
+        </div>
+        <div id='model' class="col s12" style="margin-top:40px">
+            <table class="highlight">
+                <thead>
+                    <tr>
+                        <th>Layer</th>
+                        <th>Name</th>
+                        <th>Trainable</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    model_lines
+                </tbody>
+            </table>
+        </div>
+        <div id="info" class="row" style="margin-top:40px">
+            <div class="row">
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <h4>Train</h4>
+                            <div class="input-field col s4">
+                                <i class="material-icons prefix">flag</i>
+                                <input id="input_begin" type="text" class="validate" value="begin_at">
+                                <label for="input_begin">Start at</label>
+                            </div>
+                            <div class="input-field col s4">
+                                <i class="material-icons prefix">flag</i>
+                                <input id="input_end" type="tel" class="validate" value="end_at">
+                                <label for="input_end">End at</label>
+                            </div>
+                            <div class="input-field col s4">
+                                <i class="material-icons prefix">update</i>
+                                <input id="input_last" type="text" class="validate" value="last_modification">
+                                <label for="input_last">Ultima modificação do arquivo</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s4">
+                                <i class="material-icons prefix">class</i>
+                                <input id="input_classes_number" type="tel" class="validate" value="classes_number">
+                                <label for="input_classes_number">Number of classes</label>
+                            </div>
+                            <div class="input-field col s4">
+                                <i class="material-icons prefix">photo_size_select_large</i>
+                                <input id="input_target_size" type="tel" class="validate" value="target_size">
+                                <label for="input_target_size">Target Size</label>
+                            </div>
+                            <div class="input-field col s4">
+                                <i class="material-icons prefix">view_comfy</i>
+                                <input id="input_batch_size" type="tel" class="validate" value="batch_size">
+                                <label for="input_batch_size">Batch size</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">slow_motion_video</i>
+                                <input id="input_epoch_current" type="tel" class="validate" value="epoch_current">
+                                <label for="input_epoch_current">Epoch Current</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">av_timer</i>
+                                <input id="input_epoch" type="tel" class="validate" value="epoch_total">
+                                <label for="input_epoch">Total Epochs</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="row">
+                    <form class="col s12">
+                        <h4>Dataset</h4>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">data_usage</i>
+                                <input id="input_json" type="text" class="validate" value="dataset_name">
+                                <label for="input_json">Dataset Used</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">folder</i>
+                                <input id="input_data" type="text" class="validate" value="path_input_data">
+                                <label for="input_data">Dataset Path</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="row">
+                    <form class="col s12">
+                        <h4>Version</h4>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">code</i>
+                                <input id="input_weights" type="tel" class="validate" value="kootstrap_version">
+                                <label for="input_weights">Kootstrap Version</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">code</i>
+                                <input id="input_weights" type="tel" class="validate" value="keras_version">
+                                <label for="input_weights">Keras Version</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="classes" class="col s12" style="margin-top:40px">
+            <div class="collection">
+                k_list_classes
+            </div>
+        </div>
+    </div>
+    <div style="position: fixed; right: 15%; bottom: 10px;">
+        <a target="_blank" href='https://github.com/glaucomunsberg/graphium'>© Graphium</a>, 2017
+    </div>
+    <script>
+        $(document).ready(function() {
+            var chart_loss = document.getElementById("chart_loss").getContext('2d');
+            var chart_acc = document.getElementById("chart_acc").getContext('2d');
+            var chart_time = document.getElementById("chart_time").getContext('2d');
+            new Chart(chart_loss, {
+                "type": "line",
+                "data": {
+                    "labels": loss_label,
+                    "datasets": [{
+                        "label": "Loss per epoch",
+                        "data": loss_data,
+                        "fill": true,
+                        "lineTension": 0.1,
+                        "borderColor": "#2196f3"
+                    }, ]
+                },
+                "options": {}
+            });
+            new Chart(chart_acc, {
+                "type": "line",
+                "data": {
+                    "labels": acc_label,
+                    "datasets": [{
+                        "label": "Accuracy per epoch",
+                        "data": acc_data,
+                        "fill": true,
+                        "borderColor": "#00897b",
+                        "lineTension": 0.1
+                    }]
+                },
+                "options": {}
+            });
+            new Chart(chart_time, {
+                "type": "line",
+                "data": {
+                    "labels": time_label,
+                    "datasets": [{
+                        "label": "Seconds Elapsed per epoch",
+                        "data": time_data,
+                        "fill": true,
+                        "borderColor": "#3949ab",
+                        "lineTension": 0.1
+                    }]
+                },
+                "options": {}
+            });
+        });
+        loader_action
+        $('.button-collapse').sideNav();
+    </script>
+    <style>
+        .nav-wrapper {
+            padding: 0px 15px;
+        }
+        
+        .loading_spinner {
+            -webkit-animation: spin 4s linear infinite;
+            -moz-animation: spin 4s linear infinite;
+            animation: spin 4s linear infinite;
+        }
+        
+        @-moz-keyframes spin {
+            100% {
+                -moz-transform: rotate(360deg);
+            }
+        }
+        
+        @-webkit-keyframes spin {
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes spin {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</body>
+
+</html>
