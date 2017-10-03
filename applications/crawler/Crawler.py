@@ -96,8 +96,9 @@ class Crawler:
                 for month in range(1,13):
                     for day in range(1,32):
                         executation_not_done = True
-                        while executation_not_done and num_img_to_download != 0:
+                        while executation_not_done:
                             try:
+                                print 'Date ',year,month,day
                                 flickr = Flickr(self.crawler_md,class_name,tags,num_img_to_download,year,month,day,self._logger)
                                 flickr.run()
                                 executation_not_done = False

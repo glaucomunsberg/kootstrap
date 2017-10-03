@@ -17,7 +17,7 @@ Kootstrap is a bootstrap to [Keras](http://keras.io). It is a technique of compi
 **Crawls images** to each class from Flickr. This seed the dataset and compile the subsets.
     
     cd ../crawler/
-    python Main.py --mode crawler,dataset --dataset dataset_example --classes graffiti,street --flickr_tags graffiti,street\ art;street --num_images 100
+    python Main.py --mode crawler,dataset --dataset dataset_example --classes graffiti,street --flickr_tags graffiti,street --num_images 100
     
 **Execute a train** with finetuning in Imagenet Model
 

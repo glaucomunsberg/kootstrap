@@ -2,6 +2,7 @@
 
 ## version 0.0.6
 * `maker`: Dataset name only in lower case
+* `crawler`: Fixing flickr pagination crawl
 * `tools`: Create tools to migrate old datasets to kootstrap dataset, fixing metadata and transfer files
 * `system`: Train,Validation and Test proporcional size in `kootstrap.json`
 * `system`: Fixing `Kootstrap.py` absolute path
@@ -22,12 +23,12 @@
 * `crawler`: Flickr.py train, test and now validation set
 * `crawler`: with train, test and now **validation set**
 * `maker`  : Dataset.py changet to maker package
-* `maker`  : now with train, test and now validation set 
+* `maker`  : now with train, test and now validation set
 * `compiler -> maker` : the package `compiler` renomed to `maker`
 
 ## Version 0.0.2
 
-* `crawler` : Crawler.py improved to get images from Flickr 
+* `crawler` : Crawler.py improved to get images from Flickr
 * `crawler` : Dataset.py fixing the metadata
 * `crawler` : Flickr.py improved to flickr.json file configurations
 * `compiler`: Compiler.py create to create a subsets

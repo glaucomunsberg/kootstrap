@@ -63,6 +63,8 @@ class Flickr(Thread):
         self._path_dataset_class    = self._crawler_md.metadata['path_dataset']+"classes/"+self._class_name+"/"
         
         self.total_images   = 0
+        self.total_pages    = 0
+        self.total_imagens  = 0
         self.images_metadata= []
         self._current_photo = 0
         self._current_page  = 0
@@ -96,21 +98,25 @@ class Flickr(Thread):
         
         self.url            = "initial"
         while self.url != None or self.num_img_to_download != 0 :
-                
+            print 'Data url',self.url,' self.num_img_to_download',self.num_img_to_download
             data = self.flickrGetPage(self._current_page)
             
             if 'photos' in data:
+                #print 'Data'
+                #print data
+                self._logger.info('Flickr: '+str(len(data['photos']))+' images at '+str(self._current_page)+" page")
                 self._current_page += 1
                 if self._current_page == 1:
                     
-                    self._session['total_imagens'] = int(data['photos']['total'])
-                    self._session['total_pages'] = int(data['photos']['pages'])
-                    self._logger.info("Flickr: The date "+str(self._year)+"-"+str(self._month)+"-"+str(self._day)+" has "+str(self._session['total_imagens'])+" photos in "+str(self._session['total_pages'])+" pages to download")
+                    self.total_imagens = int(data['photos']['total'])
+                    self.total_pages = int(data['photos']['pages'])
+                    self._logger.info("Flickr: The date "+str(self._year)+"-"+str(self._month)+"-"+str(self._day)+" has "+str(self.total_imagens)+" photos in "+str(self.total_pages)+" pages to download")
                     
                 for photo in data['photos']['photo']:
                     
                     if self.num_img_to_download == 0:
                         self._logger.info("Flickr: Total of images has downloaded")
+                        self.url = None
                         return
                         
                     self._current_photo     += 1
@@ -169,15 +175,18 @@ class Flickr(Thread):
                             self.total_images       +=1
                         self._logger.info('Flickr: The image id '+photo['id']+' has crawled after')
                         
-                self._session['current_page'] = int(data['photos']['page'])
-                if self._session['current_page'] > self._session['total_pages']:
+                self._current_page = int(data['photos']['page'])
+                if self._current_page >= self.total_pages:
+                    print '!!!-->',self._current_page,"-",self.total_pages
                     self.url = None
+                    self.num_img_to_download = 0
                 else:
-                    self._session['current_page'] += 1
-                
-                self._logger.info("Fickr: "+str(self._current_photo)+' from '+str(self._session['total_imagens'])+' pages')
+                    self._logger.info("Flickr: "+str(self._current_page)+' from '+str(self.total_pages)+' pages')
+                print '-->',self._current_page,"-",self.total_pages
+                self._logger.info("Flickr: "+str(self._current_photo)+' from '+str(self.total_imagens)+' images')
                 
             else:
+                self._current_page +=1
                 self._logger.critical('Flickr: Dammit! The information block not return what we want :S')
                 print 'Error on data'
                 print data
@@ -188,6 +197,8 @@ class Flickr(Thread):
         self.url = "https://api.flickr.com/services/rest/?method=flickr.photos.search&tags="+self._tags+"&api_key="+self._k.flickr['flickr_public_key']+"&format=json&nojsoncallback=?&page="+str(page)+"&per_page="+str(self._k.flickr['flickr_per_page'])+"&min_upload_date="+str(self._year)+"-"+str(self._month)+"-"+str(self._day)+"%2000:00:00&max_upload_date="+str(self._year)+"-"+str(self._month)+"-"+str(self._day)+"%2023:59:59"
         self._logger.info('Flickr: flickrGetPage page '+str(page)+' :D')
         self._start_time = time.time()
+        print 'Page url'
+        print self.url 
         response = urllib.urlopen(self.url)
         data = json.loads(response.read())
         self._end_time = time.time()

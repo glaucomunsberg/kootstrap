@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import math, sys
+import math, sys, wand
 sys.path.append('../')
 
 from wand.image import Image
