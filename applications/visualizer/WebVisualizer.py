@@ -345,5 +345,6 @@ class WebVisualizer:
     def run(self,server_class=HTTPServer, handler_class=S, port=8000):
         server_address = ('', port)
         httpd = server_class(server_address, handler_class)
-        print 'Starting httpd...'
+        print 'Starting httpd'
+        print 'open in browser http://localhost:'+str(port)
         httpd.serve_forever()

@@ -51,7 +51,7 @@ class Mananger:
         serial_identifier   = self._helper.getSerialNow()
         
         if args.load_model_file != None:
-            if not os.path.exists(arg.load_model_file):
+            if not os.path.exists(args.load_model_file):
                 raise ValueError('arg --load_model_file is not a valid file .json')
             else:
                 if self.model_name != None:
@@ -104,7 +104,7 @@ class Mananger:
             self._logger.info("Mananger: create a model '{0}' at '{1}' ".format(self.model_name, self.path_model))
             os.makedirs(self.path_model)
             os.makedirs(self.path_model+"/weights/")
-            self.model_md = Metadata(self.path_model+"metadata.json",True)
+            self.model_md = Metadata(self.path_model+"metadata.json", True)
         else:
             self.model_md = Metadata(self.path_model+"metadata.json")
             

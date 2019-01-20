@@ -25,7 +25,7 @@ class Trainer:
 
         self._helper    = Helper()
         self._logger    = Logger('Trainer')
-        self.mananger    = Mananger(args,self._logger)
+        self.mananger    = Mananger(args, self._logger)
 
         self.model  = self.mananger.getModel()
     

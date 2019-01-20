@@ -4,9 +4,15 @@ The maker help you to create a dataset and subsets used to train or test. Try ex
 
 ## Commands 
 
-Start to create a dataset with two classes.
+Create a dataset with two classes.
     
     python Main.py --mode dataset --dataset_name graffiti --classes graffiti,street
+    
+    
+Create a dataset from list of class names.
+    
+    python Main.py --mode dataset --dataset_name imagenet --classes_load_file ../../data/others/imagenet_synsets.txt
+    
     
     
 Create a subset of this dataset with 90% original images

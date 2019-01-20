@@ -7,6 +7,7 @@ def main():
     parser = argparse.ArgumentParser()
     
     parser.add_argument('--model_name', type=str, default=None, help='Set the name of this model train or use --load_model')
+
     parser.add_argument('--load_model_file', type=str, default=None, help='Choose a particular model from a .json file')
     
     parser.add_argument('--load_data', type=str, default=None, help='Path to any subset or dataset compiled by kootstrap. try only the name of set too.')
