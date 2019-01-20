@@ -4,9 +4,14 @@ The trainer train a model with a dataset or subset create by you. Try execute th
 
 ## Commands 
 
-Start to realize a finetuning in image net with the subset `imagenet_per90_porp_default` created in maker.
+Start finetuning in image net with the subset `imagenet_per90_porp_default` created in maker.
     
     python Main.py --model_name model_example_1 --load_data imagenet_per90_porp_default
+    
+    
+Start finetuning in .h5 weights with the subset `imagenet_per90_porp_default` created in maker.
+
+    python Main.py --model_name model_example_1 --load_data imagenet_per90_porp_default --load_weights <PATH_FILE>.h5  
     
     
 #### Arguments

@@ -13,7 +13,7 @@
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../css/highlight.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
   <script>
     // Current page data
@@ -22,9 +22,10 @@
     var mkdocs_page_url = "/maker/";
   </script>
   
-  <script src="../js/jquery-2.1.1.min.js"></script>
-  <script src="../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
 
@@ -38,7 +39,7 @@
         <a href=".." class="icon icon-home"> Kootstrap</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -79,10 +80,6 @@
                 <li class="">
                     
     <a class="" href="compiler/">Compiler class</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="seeder/">Seeder class</a>
                 </li>
                 <li class="">
                     
@@ -201,7 +198,11 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../system/koopstrap/">Flickr configuration</a>
+    <a class="" href="../system/logger/">Logger class</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../system/metadata/">Metadata class</a>
                 </li>
     </ul>
 	    </li>
@@ -283,8 +284,11 @@
                 <h1 id="maker">Maker</h1>
 <p>The maker help you to create a dataset and subsets used to train or test. Try execute the <code>Main.py</code> class.</p>
 <h2 id="commands">Commands</h2>
-<p>Start to create a dataset with two classes.</p>
+<p>Create a dataset with two classes.</p>
 <pre><code>python Main.py --mode dataset --dataset_name graffiti --classes graffiti,street
+</code></pre>
+<p>Create a dataset from list of class names.</p>
+<pre><code>python Main.py --mode dataset --dataset_name imagenet --classes_load_file ../../data/others/imagenet_synsets.txt
 </code></pre>
 <p>Create a subset of this dataset with 90% original images</p>
 <pre><code>python Main.py --mode compiler  --dataset_name graffiti --subset_name graffiti_per90_porp_default --per_images 90
@@ -352,12 +356,12 @@
 
   Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-	  
+      
         </div>
       </div>
 
     </section>
-    
+
   </div>
 
   <div class="rst-versions" role="note" style="cursor: pointer">
@@ -371,7 +375,9 @@
       
     </span>
 </div>
-    <script src="../js/theme.js"></script>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
 
 </body>
 </html>

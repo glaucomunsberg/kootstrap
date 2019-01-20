@@ -1,13 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import traceback,json
+import traceback, json
 
 class Metadata:
     
-    metadata    = None
-    path_file   = None
-    def __init__(self,path_file,create_file=False):
+    metadata = None
+    path_file = None
+
+    def __init__(self, path_file, create_file=False):
+
         self.path_file = path_file
         
         if create_file:

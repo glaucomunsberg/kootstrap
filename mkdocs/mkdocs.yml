@@ -6,7 +6,6 @@ pages:
         - About Maker: 'maker/index.md'
         - Dataset class: 'maker/dataset.md'
         - Compiler class: 'maker/compiler.md'
-        - Seeder class: 'maker/seeder.md'
         - Scissor class: 'maker/scissor.md'
     - Crawler: 
         - About crawler: 'crawler/index.md'
@@ -32,7 +31,8 @@ pages:
     - System:
         - Koopstrap class: 'system/koopstrap.md'
         - Helper class: 'system/helper.md'
-        - Flickr configuration: 'system/koopstrap.md'
+        - Logger class: 'system/logger.md'
+        - Metadata class: 'system/metadata.md'
     - Tools:
         - About Tools: 'tools/index.md'
         - FixMetadata class: 'tools/fixmetadata.md'

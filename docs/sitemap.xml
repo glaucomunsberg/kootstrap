@@ -1,230 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    
     <url>
-     <loc>http://www.glaucomunsberg.com//</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//maker/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/maker/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//maker/dataset/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/maker/dataset/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//maker/compiler/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/maker/compiler/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//maker/seeder/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/maker/scissor/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//maker/scissor/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/crawler/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//crawler/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/crawler/flickr/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//crawler/flickr/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/crawler/crawler/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//crawler/crawler/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/trainer/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//trainer/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/trainer/callback/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//trainer/callback/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/trainer/generator/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//trainer/generator/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/trainer/mananger/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//trainer/mananger/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/trainer/model/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//trainer/model/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/trainer/trainer/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//trainer/trainer/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/tester/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//tester/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/tester/mananger/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//tester/mananger/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/tester/tester/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//tester/tester/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/analyzer/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//analyzer/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/analyzer/analyzer/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//analyzer/analyzer/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/analyzer/top_class/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//analyzer/top_class/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/analyzer/top_histogram/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//analyzer/top_histogram/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/analyzer/visualization/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//analyzer/visualization/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/system/koopstrap/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//system/koopstrap/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/system/helper/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//system/helper/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/system/logger/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//system/koopstrap/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/system/metadata/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//tools/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/tools/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//tools/fixmetadata/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/tools/fixmetadata/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//tools/migratedataset/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/tools/migratedataset/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//tools/transfer/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/tools/transfer/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//about/license/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/about/license/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://www.glaucomunsberg.com//about/release-notes/</loc>
-     <lastmod>2017-10-03</lastmod>
+     <loc>http://www.glaucomunsberg.com/about/release-notes/</loc>
+     <lastmod>2019-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
 </urlset>
