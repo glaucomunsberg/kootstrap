@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import sys, keras, os, glob
+import sys, keras, os, glob, traceback
 sys.path.append('../')
 
 from keras.models import Model, model_from_json
@@ -196,6 +196,7 @@ class Mananger:
                     self._logger.info('Mananger: Loading model at '+self._args.load_model_file)
                 except:
                     self._logger.error('Mananger: Error at loading model from file '+str(self._args.load_model_file))
+                    self._logger.error(traceback.format_exc())
             else:
                 if self._k.trainer['model'] == "VGG16":
                     self.model = VGG16(weights= self._k.trainer['weights'], include_top= self._k.trainer['include_top'])
@@ -211,7 +212,7 @@ class Mananger:
                 
         if self._args.load_weights != None:
             self.model.load_weights(self._args.load_weights)
-            self._logger.info('Centauri: Loading weights from file: '+self.args.load_weights)
+            self._logger.info('Centauri: Loading weights from file: '+self._args.load_weights)
                 
         return self.model
     
