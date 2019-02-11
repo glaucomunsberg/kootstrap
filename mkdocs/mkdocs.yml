@@ -2,46 +2,51 @@ site_name: Kootstrap
 site_description: Kootstrap is a bootstrap to Keras. It is a technique of compile and loading a datasets into a Keras application by means of a few initial instructions that enable the introduction of the rest of the program from an input device.
 pages:
     - Home: 'index.md'
-    - Maker: 
-        - About Maker: 'maker/index.md'
-        - Dataset class: 'maker/dataset.md'
-        - Compiler class: 'maker/compiler.md'
-        - Scissor class: 'maker/scissor.md'
-    - Crawler: 
-        - About crawler: 'crawler/index.md'
-        - Flickr class: 'crawler/flickr.md'
-        - Crawler class: 'crawler/crawler.md'
-    - Trainer: 
-        - About Trainer: 'trainer/index.md'
-        - Callback class: 'trainer/callback.md'
-        - Generator class: 'trainer/generator.md'
-        - Mananger class: 'trainer/mananger.md'
-        - Model class: 'trainer/model.md'
-        - Trainer class: 'trainer/trainer.md'
-    - Tester: 
-        - About Tester: 'tester/index.md'
-        - Mananger class: 'tester/mananger.md'
-        - Tester class: 'tester/tester.md'
-    - Analyzer: 
-        - About Analyzer: 'analyzer/index.md'
-        - Analyzer class: 'analyzer/analyzer.md'
-        - TopClass class: 'analyzer/top_class.md'
-        - TopHistogram class: 'analyzer/top_histogram.md'
-        - Visualization class: 'analyzer/visualization.md'
-    - System:
-        - Koopstrap class: 'system/koopstrap.md'
-        - Helper class: 'system/helper.md'
-        - Logger class: 'system/logger.md'
-        - Metadata class: 'system/metadata.md'
-    - Tools:
-        - About Tools: 'tools/index.md'
-        - FixMetadata class: 'tools/fixmetadata.md'
-        - MigrateDataset class: 'tools/migratedataset.md'
-        - Transfer class: 'tools/transfer.md'
+    - Applications:
+        - Maker: 'maker/index.md'
+        - Crawler: 'crawler/index.md'
+        - Trainer: 'trainer/index.md'
+        - Tester: 'tester/index.md'
+        - Analyzer: 'analyzer/index.md'
+        - Tools: 'tools/index.md'
+    - Class documentation:
+      - Maker:
+          - Dataset class: 'maker/dataset.md'
+          - Compiler class: 'maker/compiler.md'
+          - Scissor class: 'maker/scissor.md'
+      - Crawler:
+          - Flickr class: 'crawler/flickr.md'
+          - Crawler class: 'crawler/crawler.md'
+      - Trainer:
+          - Callback class: 'trainer/callback.md'
+          - Generator class: 'trainer/generator.md'
+          - Mananger class: 'trainer/mananger.md'
+          - Model class: 'trainer/model.md'
+          - Trainer class: 'trainer/trainer.md'
+      - Tester:
+          - Mananger class: 'tester/mananger.md'
+          - Tester class: 'tester/tester.md'
+      - Analyzer:
+          - Analyzer class: 'analyzer/analyzer.md'
+          - TopClass class: 'analyzer/top_class.md'
+          - TopHistogram class: 'analyzer/top_histogram.md'
+          - Visualization class: 'analyzer/visualization.md'
+      - System:
+          - Koopstrap class: 'system/koopstrap.md'
+          - Helper class: 'system/helper.md'
+          - Logger class: 'system/logger.md'
+          - Metadata class: 'system/metadata.md'
+      - Tools:
+          - FixMetadata class: 'tools/fixmetadata.md'
+          - MigrateDataset class: 'tools/migratedataset.md'
+          - Transfer class: 'tools/transfer.md'
     - About:
         - 'License': 'about/license.md'
         - 'Release Notes': 'about/release-notes.md'
-        
-theme: readthedocs
+
 site_author: 'Glauco Roberto Munsberg'
 site_url: 'http://www.glaucomunsberg.com/'
+theme:
+  name: 'material'
+markdown_extensions:
+  - admonition

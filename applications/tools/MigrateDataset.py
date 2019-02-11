@@ -24,6 +24,7 @@ class MigrateDataset:
     
     number_of_images_by_class   = None
     copy_way                    = None
+
     def __init__(self,args):
         
         self._k         = Kootstrap()
@@ -82,9 +83,9 @@ class MigrateDataset:
             else:
                 self.is_a_set_type  = "dataset"
                 
-        if args.copy_way in ["copy","move"]:
+        if args.copy_way in ["copy", "move"]:
             self.copy_way = args.copy_way
-        elif args.copy_way == None:
+        elif args.copy_way is None:
             self.copy_way = self._k.config['transfer_file_type'] 
         else:
             self._logger.info("Transfer: --copy_way needed")

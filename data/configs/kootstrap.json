@@ -1,16 +1,1 @@
-{
-    "file_exist_count_has_download": true,
-    "log_level": "INFO",
-    "path_root": "/Users/glaucorobertomunsbergdossantos/Projects/kootstrap/",
-    "path_dataset": "data/datasets/",
-    "path_test": "data/tests/",
-    "path_model": "data/models/",
-    "version": "0.0.6",
-    "path_log": "data/logs/",
-    "transfer_file_type": "copy",
-    "path_config": "data/configs/",
-    "file_order_randomly": true,
-    "train_proportional_size":60,
-    "validation_proportional_size":20,
-    "test_proportional_size":20
-}
+{"file_exist_count_has_download": true, "log_level": "INFO", "path_root": "/Users/glaucomunsberg/Projetos/kootstrap/", "path_dataset": "data/datasets/", "path_test": "data/tests/", "validation_proportional_size": 20, "path_model": "data/models/", "version": "0.0.6", "path_log": "data/logs/", "transfer_file_type": "copy", "test_proportional_size": 20, "path_config": "data/configs/", "train_proportional_size": 60, "file_order_randomly": true}
