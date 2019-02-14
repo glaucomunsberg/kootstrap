@@ -1,24 +1,49 @@
 # Analyzer
 
-The analyzer allow you see the information through any ways suchs `deep visualization` and `1-Top` activations.
+The analyzer allow you see the information through any ways suchs `deep visualization`, `1-Top` activations or plot 'loss and accuracity' from train.
 
-## Commands 
+## 1-Top from model 
 
 See the 1-top from model and test result.
     
-    python Main.py --mode top --test_name testing_imagenet_test_set
+    python Main.py --mode top --test_name testing_imagenet_test_set --model_name 20181210091231
     
+    
+![Screenshot](../images/20170703142612_street_onetop_histogram.png)
+
+*Top-1 to classe from model `20181210091231` at dataset  `testing_imagenet_test_set`*
+    
+## Deep Visualization
+
 See a deep visualization activation
     
     python Main.py --mode visualization --files ../../data/datasets/graffiti/classes/graffiti/4235365635_a5fba2a2d8_o.jpg --model_name model_example_1 --class_name freight\ car
     
-#### Arguments
+![Screenshot](../images/class_917_n03451798_10623_imagenet.JPEG)
+    
+    
+## Plot Loss an Acc
+
+Plot in images `loss` and `acc` of model
+
+    python Main.py --mode plot --model_name 20181210091231
+
+ Acc | Loss
+:-------------------------:|:-------------------------:
+![Screenshot](../images/20170821191051_acc_20190214094857.png)  |  ![Screenshot](../images/20170821191051_loss_20190214094857.png)
+    
+    
+!!! tip
+    You can use [Visualizer](../visualizer/index.md) to see the same information about `loss` and `acc` with a webserver.
+        
+
+## Arguments
 
 * **--mode**: if you want `top` or `visualization` 
 
 * **--title**: title used in images or files to export
 
-##### Top arguments
+### Top arguments
 
 * **--number_of_tops**: Set the number of top suchs 1 or 5.
 
@@ -32,7 +57,7 @@ See a deep visualization activation
 
 * **--number_limit_to_y**: Top in chat to y. -1 do default
 
-##### Visualization arguments
+### Visualization arguments
 
 * **--files**: file or list of images path to by analyze.
 

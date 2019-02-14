@@ -3,10 +3,7 @@ sys.path.append('../')
 
 from system.Metadata import Metadata
 from system.Logger import Logger
-from system.Helper import Helper
-from tester.Tester import Tester
-from Top import TopClass,TopHistogram
-from Visualization import Visualization
+from Plot import Plot
 
 class Analyzer:
     
@@ -22,9 +19,12 @@ class Analyzer:
     
     def __init__(self,args):
         
-        self.path_test_folder           = Tester.pathFromTestName(args.test_name)
-        
         if args.mode == "top":
+
+            from tester.Tester import Tester
+
+            self.path_test_folder = Tester.pathFromTestName(args.test_name)
+
             if self.path_test_folder == None:
                 raise ValueError('the --test_name is not valid test')
             if args.number_of_tops < 1:
@@ -40,10 +40,20 @@ class Analyzer:
         
     def start(self):
         if self._args.mode == "top":
+
+            from Top import TopClass, TopHistogram
+
             topClass = TopClass(self.path_test_predictions_csv, self.path_test_folder, self._args.number_of_tops, self.number_of_classes, self._logger)
             topClass.start()
             topHistogram = TopHistogram(self._args,topClass.file_name_top_classes,self.path_test_folder,self.number_of_classes,self._logger)
             topHistogram.start()
-        else:
+        elif self._args.mode == "visualization":
+
+            from Visualization import Visualization
+
             visualization = Visualization(self._args,self._logger)
             visualization.start()
+
+        elif self._args.mode == "plot":
+            plot = Plot(self._args)
+            plot.start()

@@ -4,7 +4,7 @@ Kootstrap is a _bootstrap_ to [Keras](http://keras.io). It is a technique of com
 
 ## Get Code
     
-If you want to get the code or contribute, go to [Kootstrap GitHub](https://github.com/glaucomunsberg/kootstrap).
+If you want to get code or contribute, go to [Kootstrap GitHub](https://github.com/glaucomunsberg/kootstrap).
 
 
 ## Commands 
@@ -95,4 +95,4 @@ if you want create a subset or recovery the `metadata.json` try:
 
 ## Graphium
 
-Try use the models trained on [Kootstrap](https://github.com/glaucomunsberg/kootstrap) on your [Graphium](https://github.com/glaucomunsberg/graphium) application.
+Try use models trained on [Kootstrap](https://github.com/glaucomunsberg/kootstrap) on your [Graphium](https://github.com/glaucomunsberg/graphium) application.

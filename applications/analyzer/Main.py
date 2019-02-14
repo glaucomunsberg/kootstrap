@@ -29,7 +29,7 @@ def main():
     args = parser.parse_args()
     
     mode = None
-    if args.mode in ["top","visualization"]:
+    if args.mode in ["top","visualization","plot"]:
         mode = Analyzer(args)
     else:
         print 'Error: --mode '+args.mode+" not defined!" 

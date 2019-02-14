@@ -2,12 +2,14 @@ site_name: Kootstrap
 site_description: Kootstrap is a bootstrap to Keras. It is a technique of compile and loading a datasets into a Keras application by means of a few initial instructions that enable the introduction of the rest of the program from an input device.
 pages:
     - Home: 'index.md'
+    - Instalation: 'about/installation.md'
     - Applications:
         - Maker: 'maker/index.md'
         - Crawler: 'crawler/index.md'
         - Trainer: 'trainer/index.md'
         - Tester: 'tester/index.md'
         - Analyzer: 'analyzer/index.md'
+        - Visualizer: 'visualizer/index.md'
         - Tools: 'tools/index.md'
     - Class documentation:
       - Maker:
