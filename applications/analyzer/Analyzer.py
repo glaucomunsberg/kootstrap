@@ -34,6 +34,7 @@ class Analyzer:
             self.test_md                    = Metadata(self.path_test_folder+"metadata.json")
         
             self.number_of_classes  = self.test_md.metadata['num_classes']
+
         self._args              = args
         
         self._logger            = Logger('Analyzer')

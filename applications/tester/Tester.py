@@ -64,7 +64,7 @@ class Tester:
             
             fist_of_files = [f for f in os.listdir(path_images_by_class) if os.path.isfile(path_images_by_class+f)]
             for file_name in fist_of_files:
-                #print 'Class name: ',class_name,' and file: ',file_name
+                print 'Class name: ',class_name,' and file: ',file_name
                 file_path = path_images_by_class+f
                 
                 if file_name != ".DS_Store" and os.stat(file_path).st_size!=0:

@@ -990,6 +990,11 @@
 </code></pre>
 <p><img alt="Screenshot" src="../images/20170703142612_street_onetop_histogram.png" /></p>
 <p><em>Top-1 to classe from model <code>20181210091231</code> at dataset  <code>testing_imagenet_test_set</code></em></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>before, check if you execute the <a href="../tester/">Tester</a> with <code>testing_imagenet_test_set</code></p>
+<p><code>python Main.py --model_name 20181210091231 --load_data testing_imagenet_test_set --test_name &lt;NAME&gt; --epoch &lt;NUMBER&gt;</code>    </p>
+</div>
 <h2 id="deep-visualization">Deep Visualization</h2>
 <p>See a deep visualization activation</p>
 <pre><code>python Main.py --mode visualization --files ../../data/datasets/graffiti/classes/graffiti/4235365635_a5fba2a2d8_o.jpg --model_name model_example_1 --class_name freight\ car

@@ -70,7 +70,7 @@ class Mananger:
         if args.epoch == -1:
             self.path_model_weights = self.path_model+"weights/weights.h5"
         else:
-            self.path_model_weights = self.path_model+"weights/weights_epoch_%03d.h5" % self.epoch
+            self.path_model_weights = self.path_model+"weights/weights_epoch_%03d.h5" % args.epoch
             
         if not os.path.isfile(self.path_model_weights):
             raise ValueError('arg --epoch is not a valid weights to by used')

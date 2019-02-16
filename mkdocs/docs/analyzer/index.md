@@ -13,6 +13,12 @@ See the 1-top from model and test result.
 
 *Top-1 to classe from model `20181210091231` at dataset  `testing_imagenet_test_set`*
     
+    
+!!! info
+    before, check if you execute the [Tester](../tester/index.md) with `testing_imagenet_test_set`
+    
+    `python Main.py --model_name 20181210091231 --load_data testing_imagenet_test_set --test_name <NAME> --epoch <NUMBER>`    
+    
 ## Deep Visualization
 
 See a deep visualization activation
