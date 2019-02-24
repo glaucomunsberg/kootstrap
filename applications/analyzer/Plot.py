@@ -61,8 +61,8 @@ class Plot:
         path_destiny = self._k.path_model()+self._args.model_name+"/"
         serial_name = self._helper.getSerialNow()
 
-        self.save(array_acc_titles, array_acc_values, 'Accuracity', 'Epochs', path_destiny+self._args.model_name+"_acc_"+serial_name+".png")
-        self.save(array_loss_titles, array_loss_values, 'Loss', 'Epochs', path_destiny+self._args.model_name+"_loss_"+serial_name+".png")
+        self.save(array_acc_titles, array_acc_values, 'Epochs', 'Accuracy', path_destiny+self._args.model_name+"_acc_"+serial_name+".png")
+        self.save(array_loss_titles, array_loss_values, 'Epochs', 'Loss', path_destiny+self._args.model_name+"_loss_"+serial_name+".png")
 
     def save(self, array_titles, array_values, xlabel, ylabel, file_name_out_png):
 

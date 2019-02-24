@@ -17,7 +17,7 @@ See the 1-top from model and test result.
 !!! info
     before, check if you execute the [Tester](../tester/index.md) with `testing_imagenet_test_set`
     
-    `python Main.py --model_name 20181210091231 --load_data testing_imagenet_test_set --test_name <NAME> --epoch <NUMBER>`    
+    python Main.py --model_name 20181210091231 --load_data testing_imagenet_test_set --test_name <NAME> --epoch <NUMBER>
     
 ## Deep Visualization
 

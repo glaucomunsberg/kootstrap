@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="598ac30a-b05a-43f7-be54-e7b6bd91a0ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/models/20190120203801/metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/applications/analyzer/Analyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/applications/analyzer/Analyzer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/applications/tester/Mananger.py" beforeDir="false" afterPath="$PROJECT_DIR$/applications/tester/Mananger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/applications/tester/Tester.py" beforeDir="false" afterPath="$PROJECT_DIR$/applications/tester/Tester.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/analyzer/Plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/applications/analyzer/Plot.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mkdocs/docs/analyzer/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs/docs/analyzer/index.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,10 +21,11 @@
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.5" value="3" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -36,7 +34,8 @@
           <entry key="json" value="14" />
           <entry key="log" value="1" />
           <entry key="md" value="25" />
-          <entry key="py" value="66" />
+          <entry key="png" value="1" />
+          <entry key="py" value="68" />
           <entry key="sh" value="3" />
           <entry key="txt" value="14" />
           <entry key="yml" value="7" />
@@ -46,10 +45,11 @@
         <counts>
           <entry key="Bash" value="3" />
           <entry key="HTML" value="1" />
+          <entry key="Image" value="1" />
           <entry key="JSON" value="14" />
           <entry key="Markdown" value="25" />
           <entry key="PLAIN_TEXT" value="15" />
-          <entry key="Python" value="66" />
+          <entry key="Python" value="68" />
           <entry key="YAML" value="7" />
         </counts>
       </usages-collector>
@@ -57,7 +57,7 @@
         <counts>
           <entry key="json" value="16" />
           <entry key="md" value="2000" />
-          <entry key="py" value="1194" />
+          <entry key="py" value="1209" />
           <entry key="yml" value="205" />
         </counts>
       </usages-collector>
@@ -65,7 +65,7 @@
         <counts>
           <entry key="JSON" value="16" />
           <entry key="Markdown" value="2000" />
-          <entry key="Python" value="1194" />
+          <entry key="Python" value="1209" />
           <entry key="YAML" value="205" />
         </counts>
       </usages-collector>
@@ -76,7 +76,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/applications/tester/Tester.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
+            <state relative-caret-position="450">
               <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
@@ -88,36 +88,41 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/applications/tester/Mananger.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
+            <state relative-caret-position="615">
               <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/models/20170821191051/metadata.json">
+        <entry file="file://$PROJECT_DIR$/mkdocs/docs/analyzer/index.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="245">
+                <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/applications/analyzer/Plot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="1916" selection-start-column="1905" selection-end-column="1916" />
+            <state relative-caret-position="409">
+              <caret line="63" column="73" selection-start-line="63" selection-start-column="73" selection-end-line="63" selection-end-column="73" />
+              <folding>
+                <marker date="1551036633184" expanded="true" signature="307:309" ph="..." />
+                <marker date="1551036633184" expanded="true" signature="307:381" ph="..." />
+                <marker date="1551036633184" expanded="true" signature="307:386" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/models/20190120203801/metadata.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mkdocs/docs/analyzer/index.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="192">
-                <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/data/models/20190120203801/20190120203801_acc_20190224162923.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -188,12 +193,12 @@
         <option value="$PROJECT_DIR$/mkdocs/docs/visualizer/index.md" />
         <option value="$PROJECT_DIR$/applications/analyzer/Main.py" />
         <option value="$PROJECT_DIR$/applications/system/Kootstrap.py" />
-        <option value="$PROJECT_DIR$/applications/analyzer/Plot.py" />
         <option value="$PROJECT_DIR$/applications/analyzer/Analyzer.py" />
         <option value="$PROJECT_DIR$/data/datasets/imagenet_flickr_propped/metadata.json" />
         <option value="$PROJECT_DIR$/applications/tester/Mananger.py" />
         <option value="$PROJECT_DIR$/applications/tester/Tester.py" />
         <option value="$PROJECT_DIR$/mkdocs/docs/analyzer/index.md" />
+        <option value="$PROJECT_DIR$/applications/analyzer/Plot.py" />
       </list>
     </option>
   </component>
@@ -213,6 +218,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -223,31 +229,42 @@
             <path>
               <item name="kootstrap" type="b2602c69:ProjectViewProjectNode" />
               <item name="kootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="applications" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kootstrap" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="applications" type="462c0819:PsiDirectoryNode" />
+              <item name="analyzer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kootstrap" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kootstrap" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kootstrap" type="b2602c69:ProjectViewProjectNode" />
               <item name="kootstrap" type="462c0819:PsiDirectoryNode" />
-              <item name="mkdocs" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kootstrap" type="b2602c69:ProjectViewProjectNode" />
               <item name="kootstrap" type="462c0819:PsiDirectoryNode" />
-              <item name="mkdocs" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="20190120203801" type="4c48a1f:PuppetPsiDirectoryNode$Module" />
             </path>
             <path>
               <item name="kootstrap" type="b2602c69:ProjectViewProjectNode" />
               <item name="kootstrap" type="462c0819:PsiDirectoryNode" />
-              <item name="mkdocs" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="analyzer" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -310,10 +327,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="732" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="732" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2956381" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30048466" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -344,16 +361,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mkdocs/docs/maker/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="195">
-            <caret line="13" column="116" selection-start-line="13" selection-start-column="116" selection-end-line="13" selection-end-column="116" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/applications/trainer/Model.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -595,18 +602,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/applications/analyzer/Plot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="70" column="26" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
-          <folding>
-            <marker date="1550144931201" expanded="true" signature="307:309" ph="..." />
-            <marker date="1550144931201" expanded="true" signature="307:381" ph="..." />
-            <marker date="1550144931201" expanded="true" signature="307:386" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/datasets/imagenet_flickr_propped/metadata.json" />
     <entry file="file://$PROJECT_DIR$/data/datasets/imagenet_flickr_cropped/metadata.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -619,9 +614,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="563">
           <caret line="179" column="55" selection-start-line="179" selection-start-column="43" selection-end-line="179" selection-end-column="55" />
-          <folding>
-            <element signature="e#47#66#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -653,9 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
           <caret line="15" column="36" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="36" />
-          <folding>
-            <element signature="e#47#62#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -668,7 +657,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/applications/tester/Tester.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
+        <state relative-caret-position="450">
           <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
@@ -678,7 +667,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/applications/tester/Mananger.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
+        <state relative-caret-position="615">
           <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
         </state>
       </provider>
@@ -696,10 +685,25 @@
     <entry file="file://$PROJECT_DIR$/mkdocs/docs/analyzer/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="192">
-            <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <first_editor relative-caret-position="245">
+            <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/models/20190120203801/20190120203801_acc_20190224162923.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/applications/analyzer/Plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="63" column="73" selection-start-line="63" selection-start-column="73" selection-end-line="63" selection-end-column="73" />
+          <folding>
+            <marker date="1551036633184" expanded="true" signature="307:309" ph="..." />
+            <marker date="1551036633184" expanded="true" signature="307:381" ph="..." />
+            <marker date="1551036633184" expanded="true" signature="307:386" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
