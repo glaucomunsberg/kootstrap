@@ -16,7 +16,7 @@
     <session id="659274150">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="2" />
@@ -118,11 +118,6 @@
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/models/20190120203801/20190120203801_acc_20190224162923.png">
-          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
